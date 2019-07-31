@@ -26,6 +26,7 @@ namespace Coffee.Pages
         async void OnRegisterButtonClicked(object sender, EventArgs e)
         {
             Console.WriteLine("Register");
+            await Navigation.PushAsync(new RegisterPage());
         }
     }
 }
