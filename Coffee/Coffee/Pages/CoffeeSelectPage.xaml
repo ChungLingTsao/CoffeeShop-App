@@ -4,9 +4,49 @@
              x:Class="Coffee.Pages.CoffeeSelectPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            <Label Text="Select your coffee" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+           
+            <Label Text="Espresso" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="S" Clicked="AddCoffee"></Button>
+                <Button x:Name="EspressoM" Text="M" Clicked="ButtonTest"></Button>
+                <Button x:Name="EspressoL" Text="L"></Button>
+            </StackLayout>
+
+            <Label Text="Long Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="S"></Button>
+                <Button Text="M"></Button>
+                <Button Text="L"></Button>
+            </StackLayout>
+
+            <Label Text="Cappacino" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="S"></Button>
+                <Button Text="M"></Button>
+                <Button Text="L"></Button>
+            </StackLayout>
+            <Button Text="Place Order"></Button>
+
+
+            <Label  x:Name="testLabel"  Text=""/>
+            <!--<RadioButton Content="Green" Tag="Green" Checked="BGRadioButton_Checked"/>-->
+            <!--<Label Text="COFFEEEWelcome to Xamarin.Forms!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            
+            S M L 
+                <Button Text="Add" Clicked="Add_Button_Clicked"></Button>
+            Long Black
+            <Button Text="Add" Clicked="Add_Button_Clicked"></Button>
+            Capacino
+            <Button Text="Add" Clicked="Add_Button_Clicked"></Button>
+            Latte
+            <Button Text="Add" Clicked="Add_Button_Clicked"></Button>
+            Flat White
+            <Button Text="Add" Clicked="Add_Button_Clicked"></Button>-->
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

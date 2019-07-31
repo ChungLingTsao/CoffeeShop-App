@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Pages\CoffeeConfirmPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Pages\CoffeeSelectPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -51,3 +51,5 @@ System.Runtime
 SQLite-net
 Xamarin.Forms.Core
 Xamarin.Forms.Xaml
+netstandard
+System.Reflection.Extensions
