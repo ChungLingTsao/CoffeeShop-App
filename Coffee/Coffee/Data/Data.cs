@@ -14,7 +14,7 @@ namespace Coffee.Data
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Customer>().Wait();
-            _database.GetConnection().Close();
+            //_database.GetConnection().Close();
 
         }
     }
