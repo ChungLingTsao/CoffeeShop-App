@@ -1,0 +1,15 @@
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\bin\Debug\netstandard2.0\Coffee.deps.json
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\bin\Debug\netstandard2.0\Coffee.dll
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\bin\Debug\netstandard2.0\ref\Coffee.dll
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\bin\Debug\netstandard2.0\Coffee.pdb
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.csprojAssemblyReference.cache
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\LoginPage.xaml.g.cs
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.csproj.CoreCompileInputs.cache
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.AssemblyInfoInputs.cache
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.AssemblyInfo.cs
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.dll
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\ref\Coffee.dll
+C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.pdb
