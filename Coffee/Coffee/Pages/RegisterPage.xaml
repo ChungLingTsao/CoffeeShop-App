@@ -25,13 +25,16 @@
     <ContentPage.Content>
         <StackLayout Margin="20">
             <Entry Placeholder="Username"
-                Text=""
+                Text="{Binding UserName}"
+                HeightRequest="50" />
+            <Entry Placeholder="Name"
+                Text="{Binding Name}"
                 HeightRequest="50" />
             <Entry Placeholder="Email Address"
-                Text=""
+                Text="{Binding EmailAddress}"
                 HeightRequest="50" />
             <Entry Placeholder="Password"
-                Text=""
+                Text="{Binding Password}"
                 HeightRequest="50" 
                 IsPassword="True"/>
             <Button

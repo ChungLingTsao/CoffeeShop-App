@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Coffee.Models;
 
 namespace Coffee.Pages
 {
@@ -20,6 +21,10 @@ namespace Coffee.Pages
         async void OnSignUpButtonClicked(object sender, EventArgs e)
         {
             Console.WriteLine("Sign Up");
+            var customer = (Customer)BindingContext;
+            Console.WriteLine(customer.UserName);
+            await DisplayAlert("Complete", "User has been created", "OK");
+            await App.Database.SaveCustomer(customer);
             await Navigation.PopAsync();
         }
     }
