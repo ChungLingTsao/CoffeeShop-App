@@ -1,52 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Coffee.Pages.CoffeeSelectPage">
+             x:Class="Coffee.Pages.CoffeeSelectPage"
+             Title="Our Coffee Selection">
+
+    
     <ContentPage.Content>
-        <StackLayout>
-            
-            <Label Text="Select your coffee" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-           
-            <Label Text="Espresso" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <StackLayout Orientation="Horizontal">
-                <Button Text="S" Clicked="AddCoffee"></Button>
-                <Button x:Name="EspressoM" Text="M" Clicked="ButtonTest"></Button>
-                <Button x:Name="EspressoL" Text="L"></Button>
+
+        <ScrollView>
+
+
+            <StackLayout>
+
+                <Label Text="Make your selections to add to your order, then place order" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+
+                <StackLayout Orientation="Horizontal"  HeightRequest="60" Grid.Column="0">
+                    <Image Source="cup.PNG" WidthRequest="30" Aspect="AspectFit"  />
+                    <Label Text="Espresso" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Large" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="S" Clicked="ButtonEspressoAdd"></Button>
+                    <Button Text="M" Clicked="ButtonEspressoAdd"></Button>
+                    <Button Text="L" Clicked="ButtonEspressoAdd"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"  HeightRequest="60" Grid.Column="0">
+                    <Image Source="cup.PNG" WidthRequest="30" Aspect="AspectFit"  />
+                    <Label Text="Long Black" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Large" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="S" Clicked="ButtonLongBlackAdd"></Button>
+                    <Button Text="M" Clicked="ButtonLongBlackAdd"></Button>
+                    <Button Text="L" Clicked="ButtonLongBlackAdd"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"  HeightRequest="60" Grid.Column="0">
+                    <Image Source="cup.PNG" WidthRequest="30" Aspect="AspectFit"  />
+                    <Label Text="Cappuccino" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Large" />
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="S" Clicked="ButtonCappuccinoAdd"></Button>
+                    <Button Text="M" Clicked="ButtonCappuccinoAdd"></Button>
+                    <Button Text="L" Clicked="ButtonCappuccinoAdd"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"  HeightRequest="60" Grid.Column="0">
+                    <Image Source="cup.PNG" WidthRequest="30" Aspect="AspectFit"  />
+                    <Label Text="Latte" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Large" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="S" Clicked="ButtonLatteAdd"></Button>
+                    <Button Text="M" Clicked="ButtonLatteAdd"></Button>
+                    <Button Text="L" Clicked="ButtonLatteAdd"></Button>
+                </StackLayout>
+
+                <StackLayout>
+
+
+                    <Button Text="Place Order" Clicked="ButtonPlaceOrder"></Button>
+
+
+                    <Label  x:Name="testLabel"  Text=""/>
+
+
+
+                </StackLayout>
             </StackLayout>
-
-            <Label Text="Long Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <StackLayout Orientation="Horizontal">
-                <Button Text="S"></Button>
-                <Button Text="M"></Button>
-                <Button Text="L"></Button>
-            </StackLayout>
-
-            <Label Text="Cappacino" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            
-            <StackLayout Orientation="Horizontal">
-                <Button Text="S"></Button>
-                <Button Text="M"></Button>
-                <Button Text="L"></Button>
-            </StackLayout>
-            <Button Text="Place Order"></Button>
-
-
-            <Label  x:Name="testLabel"  Text=""/>
-            <!--<RadioButton Content="Green" Tag="Green" Checked="BGRadioButton_Checked"/>-->
-            <!--<Label Text="COFFEEEWelcome to Xamarin.Forms!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            
-            S M L 
-                <Button Text="Add" Clicked="Add_Button_Clicked"></Button>
-            Long Black
-            <Button Text="Add" Clicked="Add_Button_Clicked"></Button>
-            Capacino
-            <Button Text="Add" Clicked="Add_Button_Clicked"></Button>
-            Latte
-            <Button Text="Add" Clicked="Add_Button_Clicked"></Button>
-            Flat White
-            <Button Text="Add" Clicked="Add_Button_Clicked"></Button>-->
-
-
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
+    
+
 </ContentPage>

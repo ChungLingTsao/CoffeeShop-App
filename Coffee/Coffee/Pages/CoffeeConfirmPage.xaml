@@ -4,7 +4,7 @@
              x:Class="Coffee.Pages.CoffeeConfirmPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Thanks you"
+            <Label Text="Thank you"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Label Text="Your Coffee Order has been placed and will be ready in 7 minutes"
