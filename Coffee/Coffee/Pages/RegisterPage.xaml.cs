@@ -23,9 +23,17 @@ namespace Coffee.Pages
             Console.WriteLine("Sign Up");
             var customer = (Customer)BindingContext;
             Console.WriteLine(customer.UserName);
-            await DisplayAlert("Complete", "User has been created", "OK");
-            await App.Database.SaveCustomer(customer);
-            await Navigation.PopAsync();
+            var checkCustomer = await App.Database.UserNameExists(customer.UserName);
+            if (checkCustomer != null)
+            {
+                await DisplayAlert("Error", "Username already exists", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Complete", "User has been created", "OK");
+                await App.Database.SaveCustomer(customer);
+                await Navigation.PopAsync();
+            }          
         }
     }
 }

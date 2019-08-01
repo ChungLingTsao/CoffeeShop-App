@@ -48,5 +48,10 @@ namespace Coffee.Data
                 .FirstOrDefaultAsync();
         }
 
+        public Task<Customer> UserNameExists(string username)
+        {
+            return _database.Table<Customer>().Where(i => i.UserName == username).FirstOrDefaultAsync();
+        }
+
     }
 }

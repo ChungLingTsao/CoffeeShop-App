@@ -27,7 +27,7 @@
                     Clicked="OnTopUpButtonClicked"
                     HeightRequest="50"/>
             <Button
-                    Text="Top Up"
+                    Text="Account Details"
                     Clicked="OnAccountDetailsButtonClicked"
                     HeightRequest="50"/>
         </StackLayout>
