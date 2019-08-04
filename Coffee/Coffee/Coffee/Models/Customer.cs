@@ -14,6 +14,15 @@ namespace Coffee.Models
         public string Password { get; set; }
         public string EmailAddress { get; set; }
 
+        // Create enum type Bank so that it is less prone to errors 
+        public enum Bank { Bnz, Anz, Asb, Kiwibank};
+        private Bank _bank;
+        public Bank SelectedBank
+        {
+            get { return _bank; }
+            set { _bank = value; }
+        }
 
+        public double Balance { get; set; }
     }
 }
