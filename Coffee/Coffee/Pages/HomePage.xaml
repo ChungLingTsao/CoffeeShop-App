@@ -4,15 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Coffee.Pages.LoginPage"
-             Title="Login Page">
+             x:Class="Coffee.Pages.HomePage">
     <ContentPage.Resources>
-        <!-- Implicit styles -->
-        <Style TargetType="{x:Type Entry}">
-            <Setter Property="BackgroundColor"
-                    Value="{StaticResource AppBackgroundColor}" />
-        </Style>
-
         <Style TargetType="Button"
                ApplyToDerivedTypes="True"
                CanCascade="True">
@@ -24,23 +17,19 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <Entry Placeholder="Username"
-                x:Name="LoginUserNameEntry"
-                HeightRequest="50" />
-            <Entry Placeholder="Password"
-                x:Name="LoginPasswordEntry"
-                HeightRequest="50" 
-                IsPassword="True"/>
+            <Label x:Name="UserName" Text="{Binding UserName, Mode=OneWay}" HorizontalOptions="CenterAndExpand"/>
             <Button
-                    Text="Login"
-                    Clicked="OnLoginButtonClicked"
-                    HeightRequest="50"
-                    HorizontalOptions="Center"/>
+                    Text="Order Coffee"
+                    Clicked="OnOrderCoffeeButtonClicked"
+                    HeightRequest="50"/>
             <Button
-                    Text="Register"
-                    Clicked="OnRegisterButtonClicked"
-                    HeightRequest="50"
-                    HorizontalOptions="Center"/>
+                    Text="Top Up"
+                    Clicked="OnTopUpButtonClicked"
+                    HeightRequest="50"/>
+            <Button
+                    Text="Account Details"
+                    Clicked="OnAccountDetailsButtonClicked"
+                    HeightRequest="50"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

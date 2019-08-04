@@ -4,8 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Coffee.Pages.LoginPage"
-             Title="Login Page">
+             x:Class="Coffee.Pages.RegisterPage"
+             Title="Register Page">
     <ContentPage.Resources>
         <!-- Implicit styles -->
         <Style TargetType="{x:Type Entry}">
@@ -17,28 +17,29 @@
                ApplyToDerivedTypes="True"
                CanCascade="True">
             <Setter Property="FontSize" Value="Medium" />
-            <Setter Property="BackgroundColor" Value="{StaticResource AndroidButtonBackgroundColor}" />
-            <Setter Property="TextColor" Value="{StaticResource AppTextColor}" />
+            <Setter Property="BackgroundColor" Value="#676CFB" />
+            <Setter Property="TextColor" Value="White" />
             <Setter Property="BorderRadius" Value="5" />
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Margin="20">
             <Entry Placeholder="Username"
-                x:Name="LoginUserNameEntry"
+                Text="{Binding UserName}"
+                HeightRequest="50" />
+            <Entry Placeholder="Name"
+                Text="{Binding Name}"
+                HeightRequest="50" />
+            <Entry Placeholder="Email Address"
+                Text="{Binding EmailAddress}"
                 HeightRequest="50" />
             <Entry Placeholder="Password"
-                x:Name="LoginPasswordEntry"
+                Text="{Binding Password}"
                 HeightRequest="50" 
                 IsPassword="True"/>
             <Button
-                    Text="Login"
-                    Clicked="OnLoginButtonClicked"
-                    HeightRequest="50"
-                    HorizontalOptions="Center"/>
-            <Button
-                    Text="Register"
-                    Clicked="OnRegisterButtonClicked"
+                    Text="Sign Up"
+                    Clicked="OnSignUpButtonClicked"
                     HeightRequest="50"
                     HorizontalOptions="Center"/>
         </StackLayout>
