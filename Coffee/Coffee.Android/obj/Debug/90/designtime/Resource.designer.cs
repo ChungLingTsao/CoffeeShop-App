@@ -66,30 +66,14 @@ namespace Coffee.Droid
 			}
 		}
 		
-		public partial class Drawable
-		{
-			
-			// aapt resource value: 0x7F020000
-			public const int cup = 2130837504;
-			
-			static Drawable()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Drawable()
-			{
-			}
-		}
-		
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7F030000
-			public const int sliding_tabs = 2130903040;
+			// aapt resource value: 0x7F020000
+			public const int sliding_tabs = 2130837504;
 			
-			// aapt resource value: 0x7F030001
-			public const int toolbar = 2130903041;
+			// aapt resource value: 0x7F020001
+			public const int toolbar = 2130837505;
 			
 			static Id()
 			{
@@ -104,11 +88,11 @@ namespace Coffee.Droid
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7F040000
-			public const int Tabbar = 2130968576;
+			// aapt resource value: 0x7F030000
+			public const int Tabbar = 2130903040;
 			
-			// aapt resource value: 0x7F040001
-			public const int Toolbar = 2130968577;
+			// aapt resource value: 0x7F030001
+			public const int Toolbar = 2130903041;
 			
 			static Layout()
 			{
@@ -123,14 +107,14 @@ namespace Coffee.Droid
 		public partial class Mipmap
 		{
 			
-			// aapt resource value: 0x7F050000
-			public const int icon = 2131034112;
+			// aapt resource value: 0x7F040000
+			public const int icon = 2130968576;
 			
-			// aapt resource value: 0x7F050001
-			public const int icon_round = 2131034113;
+			// aapt resource value: 0x7F040001
+			public const int icon_round = 2130968577;
 			
-			// aapt resource value: 0x7F050002
-			public const int launcher_foreground = 2131034114;
+			// aapt resource value: 0x7F040002
+			public const int launcher_foreground = 2130968578;
 			
 			static Mipmap()
 			{
@@ -145,14 +129,14 @@ namespace Coffee.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7F060000
-			public const int AppCompatDialogStyle = 2131099648;
+			// aapt resource value: 0x7F050000
+			public const int AppCompatDialogStyle = 2131034112;
 			
-			// aapt resource value: 0x7F060001
-			public const int MainTheme = 2131099649;
+			// aapt resource value: 0x7F050001
+			public const int MainTheme = 2131034113;
 			
-			// aapt resource value: 0x7F060002
-			public const int MainTheme_Base = 2131099650;
+			// aapt resource value: 0x7F050002
+			public const int MainTheme_Base = 2131034114;
 			
 			static Style()
 			{
