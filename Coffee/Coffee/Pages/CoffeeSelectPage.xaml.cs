@@ -71,6 +71,16 @@ namespace Coffee.Pages
             CoffeeAdd(type, size);
         }
 
+
+        private void ButtonFlatWhiteAdd(object sender, EventArgs e)
+        {
+            var type = "Flat White";
+            var button = (Button)sender;
+            var size = button.Text;
+            size = GetNiceSize(size);
+            CoffeeAdd(type, size);
+        }
+
         private string GetNiceSize(string s)
         {
             var size = "";

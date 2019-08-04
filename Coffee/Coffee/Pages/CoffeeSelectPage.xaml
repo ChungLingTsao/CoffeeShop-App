@@ -5,68 +5,77 @@
              Title="Our Coffee Selection">
 
     
+
     <ContentPage.Content>
+        <Grid x:Name="controlGrid" RowSpacing="2" ColumnSpacing="2">
 
-        <ScrollView>
-
-
-            <StackLayout>
-
-                <Label Text="Make your selections to add to your order, then place order" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <!--<ScrollView>-->
 
 
-                <StackLayout Orientation="Horizontal"  HeightRequest="60" Grid.Column="0">
-                    <Image Source="cup.PNG" WidthRequest="30" Aspect="AspectFit"  />
-                    <Label Text="Espresso" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Large" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Button Text="S" Clicked="ButtonEspressoAdd"></Button>
-                    <Button Text="M" Clicked="ButtonEspressoAdd"></Button>
-                    <Button Text="L" Clicked="ButtonEspressoAdd"></Button>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal"  HeightRequest="60" Grid.Column="0">
-                    <Image Source="cup.PNG" WidthRequest="30" Aspect="AspectFit"  />
-                    <Label Text="Long Black" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Large" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Button Text="S" Clicked="ButtonLongBlackAdd"></Button>
-                    <Button Text="M" Clicked="ButtonLongBlackAdd"></Button>
-                    <Button Text="L" Clicked="ButtonLongBlackAdd"></Button>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal"  HeightRequest="60" Grid.Column="0">
-                    <Image Source="cup.PNG" WidthRequest="30" Aspect="AspectFit"  />
-                    <Label Text="Cappuccino" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Large" />
-                </StackLayout>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
 
 
-                <StackLayout Orientation="Horizontal">
-                    <Button Text="S" Clicked="ButtonCappuccinoAdd"></Button>
-                    <Button Text="M" Clicked="ButtonCappuccinoAdd"></Button>
-                    <Button Text="L" Clicked="ButtonCappuccinoAdd"></Button>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal"  HeightRequest="60" Grid.Column="0">
-                    <Image Source="cup.PNG" WidthRequest="30" Aspect="AspectFit"  />
-                    <Label Text="Latte" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Large" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Button Text="S" Clicked="ButtonLatteAdd"></Button>
-                    <Button Text="M" Clicked="ButtonLatteAdd"></Button>
-                    <Button Text="L" Clicked="ButtonLatteAdd"></Button>
-                </StackLayout>
-
-                <StackLayout>
-
-
-                    <Button Text="Place Order" Clicked="ButtonPlaceOrder"></Button>
-
-
-                    <Label  x:Name="testLabel"  Text=""/>
+            <Label Text="Make your selections to add to your order, then place order" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="Start" FontSize="Default"  Grid.ColumnSpan="5" />
 
 
 
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
+            <Image Source="cup.PNG" Aspect="AspectFit"  Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Espresso" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="1" Grid.Column="1"  Grid.ColumnSpan="4" />
+            <Button Text="S" Clicked="ButtonEspressoAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="1" Grid.Column="2"></Button>
+            <Button Text="M" Clicked="ButtonEspressoAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="1" Grid.Column="3"></Button>
+            <Button Text="L" Clicked="ButtonEspressoAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="1" Grid.Column="4"></Button>
+
+
+            <Image Source="cup.PNG" Aspect="AspectFit"  Grid.Row="2" Grid.Column="0"/>
+            <Label Text="Long Black" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" />
+            <Button Text="S" Clicked="ButtonLongBlackAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="2" Grid.Column="2"></Button>
+            <Button Text="M" Clicked="ButtonLongBlackAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="2" Grid.Column="3"></Button>
+            <Button Text="L" Clicked="ButtonLongBlackAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="2" Grid.Column="4"></Button>
+
+            <Image Source="cup.PNG" Aspect="AspectFit"   Grid.Row="3" Grid.Column="0"/>
+            <Label Text="Cappuccino" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4"/>
+            <Button Text="S" Clicked="ButtonCappuccinoAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="3" Grid.Column="2"></Button>
+            <Button Text="M" Clicked="ButtonCappuccinoAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="3" Grid.Column="3"></Button>
+            <Button Text="L" Clicked="ButtonCappuccinoAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="3" Grid.Column="4"></Button>
+
+            <Image Source="cup.PNG" Aspect="AspectFit"   Grid.Row="4" Grid.Column="0" />
+            <Label Text="Latte" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4"/>
+            <Button Text="S" Clicked="ButtonLatteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="4" Grid.Column="2"></Button>
+            <Button Text="M" Clicked="ButtonLatteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="4" Grid.Column="3"></Button>
+            <Button Text="L" Clicked="ButtonLatteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="4" Grid.Column="4"></Button>
+
+            <Image Source="cup.PNG" Aspect="AspectFit"   Grid.Row="5" Grid.Column="0" />
+            <Label Text="Flat White" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4"/>
+            <Button Text="S" Clicked="ButtonFlatWhiteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="5" Grid.Column="2"></Button>
+            <Button Text="M" Clicked="ButtonFlatWhiteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="5" Grid.Column="3"></Button>
+            <Button Text="L" Clicked="ButtonFlatWhiteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="5" Grid.Column="4"></Button>
+
+
+            <Button Text="Place Order" Clicked="ButtonPlaceOrder" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="5"></Button>
+
+
+            <Label  x:Name="testLabel"  Text=""/>
+
+        </Grid>
+
+        <!--</ScrollView>-->
     </ContentPage.Content>
     
 
