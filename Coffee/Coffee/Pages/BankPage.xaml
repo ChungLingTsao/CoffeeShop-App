@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="Coffee.Pages.BankPage"
+             Title="Bank Page">
+
+    <StackLayout>
+        <!--<Image x:Name="img" Source="ANZLogo.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image> 
+        <Button Text="test"
+            Clicked="ButtonClicked" /> -->
+        <Label x:Name="heading"
+            Text="Please select bank provider"
+            HorizontalOptions="Center"
+            VerticalOptions="Start" 
+            Margin="10, 10, 10, 10"/>               
+        <ImageButton Source="ANZlogo.png"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="ANZButtonClicked" />
+        <ImageButton Source="ASBlogo.png"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="ASBButtonClicked" />
+        <ImageButton Source="BNZlogo.png"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="BNZButtonClicked" />
+        <ImageButton Source="Kiwibanklogo.png"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="KiwibankButtonClicked" />
+        <Label HeightRequest="5"/>
+<!--        <BoxView 
+            HeightRequest="1" 
+            BackgroundColor="Black" 
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand" />
+-->
+ <!--       <Frame BorderColor="Black"
+            Margin="8, 10, 8, 0">
+            <Label x:Name="topup"
+                Text="Top up value:"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" />
+        </Frame> -->
+
+        <Label x:Name="label"
+            Text="No bank provider selected"
+            TextColor="Black"
+            FontSize="Small"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <Picker x:Name="picker"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Small"
+                Title="Top up value"
+                TitleColor="Gray">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>$5</x:String>
+                    <x:String>$10</x:String>
+                    <x:String>$20</x:String>
+                    <x:String>$50</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Text="Proceed to Paymark"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Clicked="PaymarkButtonClicked" />
+        
+    </StackLayout>
+</ContentPage>
