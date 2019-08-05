@@ -25,7 +25,7 @@ namespace Coffee.Pages
 
         private void ReturnButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new BankPage());
+            Navigation.PopAsync();
         }
     }
 }
