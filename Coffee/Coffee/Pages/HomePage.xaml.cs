@@ -20,13 +20,13 @@ namespace Coffee.Pages
         async void OnOrderCoffeeButtonClicked(object sender, EventArgs e)
         {
             Console.WriteLine("Order Coffee");
-            //await Navigation.PushAsync(new OrderCoffeePage());
+            await Navigation.PushAsync(new CoffeeSelectPage());
         }
 
         async void OnTopUpButtonClicked(object sender, EventArgs e)
         {
             Console.WriteLine("Top Up");
-            //await Navigation.PushAsync(new OrderCoffeePage());
+            await Navigation.PushAsync(new BankPage());
         }
 
         async void OnAccountDetailsButtonClicked(object sender, EventArgs e)
