@@ -13,6 +13,12 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+#Dont commit bin/obj
+Coffee/bin/
+Coffee/obj/
+Coffee.Android/bin/
+Coffee.Android/obj/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

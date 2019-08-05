@@ -25,6 +25,7 @@ namespace Coffee.Pages
 
         private void ReturnButtonClicked(object sender, EventArgs e)
         {
+            Console.WriteLine("test");
             Navigation.PopAsync();
         }
     }
