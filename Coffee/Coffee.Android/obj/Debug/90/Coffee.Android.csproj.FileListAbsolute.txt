@@ -494,3 +494,12 @@ C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee.Android\obj\Debug\90\stamp\_Cop
 C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\chaz_\source\repos\Coffee\Coffee\Coffee.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\build.props
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\adb.props
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\Coffee.Android.csprojAssemblyReference.cache
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\resourcepaths.cache
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\res.flag
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\Coffee.Android.dll
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\Coffee.Android.pdb
