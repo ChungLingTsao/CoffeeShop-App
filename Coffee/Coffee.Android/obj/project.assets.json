@@ -2172,26 +2172,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\byron\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\trent\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee.Android\\Coffee.Android.csproj",
+      "projectUniqueName": "D:\\DEV\\CoffeeShop-App\\Coffee\\Coffee.Android\\Coffee.Android.csproj",
       "projectName": "Coffee.Android",
-      "projectPath": "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee.Android\\Coffee.Android.csproj",
-      "packagesPath": "C:\\Users\\byron\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee.Android\\obj\\",
+      "projectPath": "D:\\DEV\\CoffeeShop-App\\Coffee\\Coffee.Android\\Coffee.Android.csproj",
+      "packagesPath": "C:\\Users\\trent\\.nuget\\packages\\",
+      "outputPath": "D:\\DEV\\CoffeeShop-App\\Coffee\\Coffee.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\byron\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\trent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
@@ -2203,8 +2198,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee\\Coffee.csproj": {
-              "projectPath": "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee\\Coffee.csproj"
+            "D:\\DEV\\CoffeeShop-App\\Coffee\\Coffee\\Coffee.csproj": {
+              "projectPath": "D:\\DEV\\CoffeeShop-App\\Coffee\\Coffee\\Coffee.csproj"
             }
           }
         }

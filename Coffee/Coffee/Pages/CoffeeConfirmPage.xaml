@@ -5,12 +5,30 @@
              Title="Order Received">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Thank you"
+            <StackLayout>
+                <Label Text="Thank you, your order has been received"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Label Text="Your Coffee Order has been placed and will be ready in 7 minutes"
+                
+            </StackLayout>
+            <StackLayout>
+                <Label Text=" "
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+                <Label Text="1x Flat White&#x0a;2x Long Black&#x0a;1x Espresso"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout>
+                
+                <Label Text="Your order will be ready to collect in 7 minutes"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout>
+
+                <Label FontSize="Large" Text="CONGRATULATIONS&#x0a;YOU HAVE NOW&#x0a;EARNED A FREE COFFEE" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

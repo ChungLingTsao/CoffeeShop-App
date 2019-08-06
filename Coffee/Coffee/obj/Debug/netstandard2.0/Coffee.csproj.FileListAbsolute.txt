@@ -74,3 +74,5 @@ C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\obj\Debug\net
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.dll
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\obj\Debug\netstandard2.0\ref\Coffee.dll
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.pdb
+D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\BankPage.xaml.g.cs
+D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\PaymarkPage.xaml.g.cs
