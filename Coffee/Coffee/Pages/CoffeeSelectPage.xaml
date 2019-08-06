@@ -20,6 +20,7 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="40" />
 
             </Grid.RowDefinitions>
@@ -68,10 +69,11 @@
             <Button Text="L" Clicked="ButtonFlatWhiteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="5" Grid.Column="4"></Button>
 
 
-            <Button Text="Place Order" Clicked="ButtonPlaceOrder" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="5"></Button>
+            <Label  x:Name="testLabel" FontSize="Medium" Text="FREE COOKIE WITH CAPPUCCINO TUESDAY" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="5" HorizontalOptions="Center"/>
+            
+            <Button Text="Place Order" Clicked="ButtonPlaceOrder" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="5"></Button>
 
 
-            <Label  x:Name="testLabel"  Text=""/>
 
         </Grid>
 

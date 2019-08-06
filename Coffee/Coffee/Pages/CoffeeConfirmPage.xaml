@@ -27,7 +27,7 @@
             </StackLayout>
             <StackLayout>
 
-                <Label FontSize="Large" Text="CONGRATULATIONS&#x0a;YOU HAVE NOW&#x0a;EARNED A FREE COFFEE" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                <Label FontSize="Large" Text="CONGRATULATIONS&#x0a;YOU HAVE NOW&#x0a;EARNED A FREE COFFEE" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
