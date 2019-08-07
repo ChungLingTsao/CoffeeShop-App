@@ -18,8 +18,9 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Text="{Binding ID}"/>
-                        <Label Grid.Column="1" Text="{Binding CustomerID}"/>
+                        <Label Text="{Binding ID, StringFormat='OrderID: {0}'}"/>
+                        <Label Grid.Column="1" Text="{Binding orderTime}"/>
+                        <Label Grid.Column="2" Text="{Binding TotalCost, StringFormat='Total Cost: ${0}'}}"/>
                     </Grid>
                 </ViewCell>
             </DataTemplate>

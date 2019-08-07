@@ -11,6 +11,8 @@ namespace Coffee.Models
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         public int CustomerID { get; set; }
+        public int TotalCost { get; set; }
+        public DateTime orderTime { get; set; }
 
     }
 }
