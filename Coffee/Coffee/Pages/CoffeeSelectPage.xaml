@@ -7,6 +7,7 @@
     
 
     <ContentPage.Content>
+        
         <Grid x:Name="controlGrid" RowSpacing="2" ColumnSpacing="2">
 
             <!--<ScrollView>-->
@@ -30,7 +31,6 @@
                 <ColumnDefinition Width="40" />
                 <ColumnDefinition Width="40" />
             </Grid.ColumnDefinitions>
-
 
             <Label Text="Make your selections to add to your order, then place order" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start"  VerticalTextAlignment="Start" FontSize="Default"  Grid.ColumnSpan="5" />
 

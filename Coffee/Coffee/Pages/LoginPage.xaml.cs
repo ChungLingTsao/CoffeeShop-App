@@ -46,5 +46,11 @@ namespace Coffee.Pages
                 BindingContext = new Customer()
             });
         }
+
+        async void OnDeleteDataButtonClicked(object sender, EventArgs e)
+        {
+            Console.WriteLine("Delete All Data");
+            await App.Database.DeleteAllData();
+        }
     }
 }

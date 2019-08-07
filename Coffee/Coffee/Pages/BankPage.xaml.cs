@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Coffee.Models;
 
 namespace Coffee.Pages
 {
@@ -56,6 +57,11 @@ namespace Coffee.Pages
         }
         void PaymarkButtonClicked(object sender, EventArgs e)
         {
+            var customer = (Customer)BindingContext;
+            int amount = Int32.Parse(picker.SelectedItem.ToString().Substring(1));
+            customer.Balance += amount;
+            App.Database.SaveCustomer(customer);
+
             Navigation.PushAsync(new PaymarkPage());
         }
     }

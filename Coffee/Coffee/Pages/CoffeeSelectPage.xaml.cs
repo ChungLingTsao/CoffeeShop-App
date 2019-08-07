@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Coffee.Models;
 
 
 namespace Coffee.Pages
@@ -15,12 +16,12 @@ namespace Coffee.Pages
     {
 
         public static string[] order = new string[8];
-
-
+        public static Order neworder = new Order();
 
         public CoffeeSelectPage()
         {
             InitializeComponent();
+            Console.WriteLine(neworder.ID);
         }
 
         private void AddCoffee(object sender, EventArgs e)
@@ -101,11 +102,21 @@ namespace Coffee.Pages
         }
 
 
-        private void CoffeeAdd(string type, string size)
+        private async void CoffeeAdd(string type, string size)
         {
             var text = size + type + " added to your order";
+            var newcoffee = new CoffeeData
+            {
+                OrderID = neworder.ID,
+                CoffeeName = type,
+                Size = size
+            };
+            Console.WriteLine(neworder.ID);
+            Console.WriteLine(newcoffee.ID);
 
-            DisplayAlert(text, "Place Order when done adding items", "OK");
+            await App.Database.SaveCoffee(newcoffee);
+            await DisplayAlert(text, "Place Order when done adding items", "OK");
+
             //await Navigation.PushAsync(new RetailList());
         }
 
@@ -114,6 +125,9 @@ namespace Coffee.Pages
 
         private async void ButtonPlaceOrder(object sender, EventArgs e)
         {
+            var customer = (Customer)BindingContext;
+            neworder.CustomerID = customer.ID;
+            await App.Database.SaveOrder(neworder);
             await Navigation.PushAsync(new CoffeeConfirmPage());
             //await Navigation.PushAsync(new RetailList());
         }
