@@ -12,20 +12,30 @@ namespace Coffee.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PaymarkPage : ContentPage
     {
-        public PaymarkPage()
+        string amount = "dasd";
+        string bank = "dasd";
+
+        public PaymarkPage(string bankSelected, string topupAmount)
         {
             InitializeComponent();
+            bank = bankSelected;
+            amount = topupAmount;
         }
 
         protected override void OnAppearing()
         {
-            DisplayAlert("Bank Transfer", "This page only simulates the money transfer", "OK");
+            SimulatingTransfer();
             base.OnAppearing();
         }
 
-        private void ReturnButtonClicked(object sender, EventArgs e)
+        async void ReturnButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PopAsync();
+            await Navigation.PopAsync();
+        }
+
+        void SimulatingTransfer()
+        {
+            DisplayAlert("Processing...", "Simulating the money transfer of " + amount + " from " + bank + " to your account.", "OK");
         }
     }
 }

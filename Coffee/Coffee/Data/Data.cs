@@ -54,6 +54,5 @@ namespace Coffee.Data
         {
             return _database.Table<Customer>().Where(i => i.UserName == username).FirstOrDefaultAsync();
         }
-
     }
 }

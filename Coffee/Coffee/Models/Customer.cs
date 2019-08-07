@@ -13,7 +13,6 @@ namespace Coffee.Models
         public string UserName { get; set; }
         public string Password { get; set; }
         public string EmailAddress { get; set; }
-
-
+        public int Balance { get; set; } 
     }
 }
