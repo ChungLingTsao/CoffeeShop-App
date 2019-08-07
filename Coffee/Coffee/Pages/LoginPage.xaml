@@ -44,6 +44,12 @@
                     Clicked="OnRegisterButtonClicked"
                     HeightRequest="50"
                     HorizontalOptions="Center"/>
+            <Button
+                    Text="Delete Data"
+                    Clicked="OnDeleteDataButtonClicked"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

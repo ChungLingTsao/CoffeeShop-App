@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Coffee.Models;
 
 
 namespace Coffee.Pages
@@ -15,12 +16,13 @@ namespace Coffee.Pages
     {
 
         public static string[] order = new string[8];
-
-
+        public static List<CoffeeData> coffeeList = new List<CoffeeData>();
+        public static Order neworder;
 
         public CoffeeSelectPage()
         {
             InitializeComponent();
+            neworder = new Order();
         }
 
         private void AddCoffee(object sender, EventArgs e)
@@ -37,8 +39,9 @@ namespace Coffee.Pages
             var type = "Espresso";
             var button = (Button)sender;
             var size = button.Text;
+            int cost = 5;
             size = GetNiceSize(size);
-            CoffeeAdd(type, size);
+            CoffeeAdd(type, size, cost);
         }
 
 
@@ -47,8 +50,9 @@ namespace Coffee.Pages
             var type = "Long Black";
             var button = (Button)sender;
             var size = button.Text;
+            int cost = 6;
             size = GetNiceSize(size);
-            CoffeeAdd(type, size);
+            CoffeeAdd(type, size, cost);
         }
 
 
@@ -57,8 +61,9 @@ namespace Coffee.Pages
             var type = "Cappuccino";
             var button = (Button)sender;
             var size = button.Text;
+            int cost = 7;
             size = GetNiceSize(size);
-            CoffeeAdd(type, size);
+            CoffeeAdd(type, size, cost);
         }
 
 
@@ -67,8 +72,9 @@ namespace Coffee.Pages
             var type = "Latte";
             var button = (Button)sender;
             var size = button.Text;
+            int cost = 5;
             size = GetNiceSize(size);
-            CoffeeAdd(type, size);
+            CoffeeAdd(type, size, cost);
         }
 
 
@@ -77,8 +83,9 @@ namespace Coffee.Pages
             var type = "Flat White";
             var button = (Button)sender;
             var size = button.Text;
+            int cost = 4;
             size = GetNiceSize(size);
-            CoffeeAdd(type, size);
+            CoffeeAdd(type, size, cost);
         }
 
         private string GetNiceSize(string s)
@@ -101,19 +108,34 @@ namespace Coffee.Pages
         }
 
 
-        private void CoffeeAdd(string type, string size)
+        private async void CoffeeAdd(string type, string size, int cost)
         {
+            await App.Database.SaveOrder(neworder);
+            var newcoffee = new CoffeeData
+            {
+                OrderID = neworder.ID,
+                CoffeeName = type,
+                Size = size,
+                Cost = cost
+            };
+            coffeeList.Add(newcoffee);
             var text = size + type + " added to your order";
+            await DisplayAlert(text, "Place Order when done adding items", "OK");
 
-            DisplayAlert(text, "Place Order when done adding items", "OK");
             //await Navigation.PushAsync(new RetailList());
         }
 
-
-
-
         private async void ButtonPlaceOrder(object sender, EventArgs e)
-        {
+        {      
+            foreach (var coffee in coffeeList)
+            {
+                neworder.TotalCost += coffee.Cost;
+                await App.Database.SaveCoffee(coffee);
+            }
+            var customer = (Customer)BindingContext;
+            neworder.CustomerID = customer.ID;
+            neworder.orderTime = DateTime.Now;
+            await App.Database.SaveOrder(neworder);
             await Navigation.PushAsync(new CoffeeConfirmPage());
             //await Navigation.PushAsync(new RetailList());
         }

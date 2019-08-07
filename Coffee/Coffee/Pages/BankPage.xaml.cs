@@ -94,6 +94,12 @@ namespace Coffee.Pages
 
         void PickerSelectedIndexChanged(object sender, EventArgs e)
         {
+            var customer = (Customer)BindingContext;
+            int amount = Int32.Parse(picker.SelectedItem.ToString().Substring(1));
+            customer.Balance += amount;
+            App.Database.SaveCustomer(customer);
+
+            Navigation.PushAsync(new PaymarkPage());
             //Method call every time when picker selection changed.
             pickerSelected = picker.SelectedItem.ToString(); // Retrieves selected item of picker
             topupAmount = Convert.ToDouble(pickerSelected.Remove(0, 1)); // Converts the selected picker item to a float by removing the '$' sign

@@ -17,7 +17,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <Label x:Name="UserName" Text="{Binding UserName, Mode=OneWay}" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="UserName" Text="{Binding Balance, Mode=OneWay}" HorizontalOptions="CenterAndExpand"/>
             <Button
                     Text="Order Coffee"
                     Clicked="OnOrderCoffeeButtonClicked"
