@@ -16,12 +16,13 @@ namespace Coffee.Pages
     {
 
         public static string[] order = new string[8];
-        public static Order neworder = new Order();
+        public static List<CoffeeData> coffeeList = new List<CoffeeData>();
+        public static Order neworder;
 
         public CoffeeSelectPage()
         {
             InitializeComponent();
-            Console.WriteLine(neworder.ID);
+            neworder = new Order();
         }
 
         private void AddCoffee(object sender, EventArgs e)
@@ -104,6 +105,7 @@ namespace Coffee.Pages
 
         private async void CoffeeAdd(string type, string size)
         {
+            await App.Database.SaveOrder(neworder);
             var text = size + type + " added to your order";
             var newcoffee = new CoffeeData
             {
@@ -111,20 +113,18 @@ namespace Coffee.Pages
                 CoffeeName = type,
                 Size = size
             };
-            Console.WriteLine(neworder.ID);
-            Console.WriteLine(newcoffee.ID);
-
-            await App.Database.SaveCoffee(newcoffee);
+            coffeeList.Add(newcoffee);
             await DisplayAlert(text, "Place Order when done adding items", "OK");
 
             //await Navigation.PushAsync(new RetailList());
         }
 
-
-
-
         private async void ButtonPlaceOrder(object sender, EventArgs e)
-        {
+        {      
+            foreach (var coffee in coffeeList)
+            {               
+                await App.Database.SaveCoffee(coffee);
+            }
             var customer = (Customer)BindingContext;
             neworder.CustomerID = customer.ID;
             await App.Database.SaveOrder(neworder);

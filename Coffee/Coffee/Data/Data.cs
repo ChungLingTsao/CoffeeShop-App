@@ -35,7 +35,7 @@ namespace Coffee.Data
         public Task<List<CoffeeData>> GetCoffeeList(Order order)
         {
             return _database.Table<CoffeeData>()
-                            //.Where(i => i.OrderID == order.ID)
+                            .Where(i => i.OrderID == order.ID)
                             .ToListAsync();
         }
 
