@@ -1092,10 +1092,6 @@ C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\D
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\cup.png
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\paymark.png
-C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\anzlogo.png
-C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\asblogo.png
-C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\bnzlogo.png
-C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\kiwibanklogo.png
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\R.txt
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\uploadflags.txt
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\resolvedassemblies.hash
@@ -1622,3 +1618,9 @@ C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\re
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\res\drawable\bnzbutton.png
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\res\drawable\dropdownicon.png
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\res\drawable\kiwibankbutton.png
+C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\anzbutton.png
+C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\asbbutton.png
+C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\balanceicon.png
+C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\bnzbutton.png
+C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\dropdownicon.png
+C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee.Android\obj\Debug\90\res\drawable\kiwibankbutton.png

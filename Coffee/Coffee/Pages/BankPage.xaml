@@ -40,10 +40,10 @@
             <Picker x:Name="picker" Grid.Row="4" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" FontSize="Micro" Title="Select amount" TitleColor="Gray">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>$5.00</x:String>
-                        <x:String>$10.00</x:String>
-                        <x:String>$20.00</x:String>
-                        <x:String>$50.00</x:String>
+                        <x:String>$5</x:String>
+                        <x:String>$10</x:String>
+                        <x:String>$20</x:String>
+                        <x:String>$50</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
