@@ -26,10 +26,14 @@ namespace Coffee.Pages
             if (customer != null)
             {
                 Console.WriteLine(customer.UserName, customer.ID);
-                await Navigation.PushAsync(new HomePage
+                App.Current.MainPage = new NavigationPage( new HomePage
                 {
                     BindingContext = customer as Customer
                 });
+                //await Navigation.PushAsync(new HomePage
+                //{
+                //    BindingContext = customer as Customer
+                //});
             }
             else
             {

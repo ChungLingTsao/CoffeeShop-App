@@ -30,7 +30,7 @@ namespace Coffee.Pages
 
         async void ReturnButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Navigation.PopToRootAsync();
         }
 
         void SimulatingTransfer()

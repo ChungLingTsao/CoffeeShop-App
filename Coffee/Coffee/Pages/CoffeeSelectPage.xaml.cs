@@ -16,13 +16,14 @@ namespace Coffee.Pages
     {
 
         public static string[] order = new string[8];
-        public static List<CoffeeData> coffeeList = new List<CoffeeData>();
+        public static List<CoffeeData> coffeeList;
         public static Order neworder;
 
         public CoffeeSelectPage()
         {
             InitializeComponent();
             neworder = new Order();
+            coffeeList = new List<CoffeeData>();
         }
 
         private void AddCoffee(object sender, EventArgs e)
@@ -126,7 +127,8 @@ namespace Coffee.Pages
         }
 
         private async void ButtonPlaceOrder(object sender, EventArgs e)
-        {      
+        {
+            neworder.TotalCost = 0;
             foreach (var coffee in coffeeList)
             {
                 neworder.TotalCost += coffee.Cost;
@@ -136,6 +138,7 @@ namespace Coffee.Pages
             neworder.CustomerID = customer.ID;
             neworder.orderTime = DateTime.Now;
             await App.Database.SaveOrder(neworder);
+            neworder.TotalCost = 0;
             await Navigation.PushAsync(new CoffeeConfirmPage());
             //await Navigation.PushAsync(new RetailList());
         }

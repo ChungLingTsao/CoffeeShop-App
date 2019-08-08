@@ -16,5 +16,10 @@ namespace Coffee.Pages
 		{
 			InitializeComponent ();
 		}
-	}
+
+        async void ReturnButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
+        }
+    }
 }
