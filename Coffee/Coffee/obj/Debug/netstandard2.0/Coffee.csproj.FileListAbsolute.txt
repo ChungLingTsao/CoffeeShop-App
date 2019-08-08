@@ -78,3 +78,5 @@ D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\BankPage.xaml
 D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\PaymarkPage.xaml.g.cs
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\CoffeeOrderPage.xaml.g.cs
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\TransactionPage.xaml.g.cs
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\CoffeeOrderPage.xaml.g.cs
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\TransactionPage.xaml.g.cs

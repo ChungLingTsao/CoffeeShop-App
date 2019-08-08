@@ -10,34 +10,35 @@
         <Grid x:Name="controlGrid" RowSpacing="5" ColumnSpacing="10">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="20" />
-                <RowDefinition Height="20" />
-                <RowDefinition Height="95" />
-                <RowDefinition Height="95" />
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
+                <RowDefinition Height="170" />
+                <RowDefinition Height="170" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="95" />
-                <ColumnDefinition Width="95" />
+                <ColumnDefinition Width="170" />
+                <ColumnDefinition Width="170" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Text="Online Banking (POLi)" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" FontSize="Default" FontAttributes="Bold" Grid.ColumnSpan="2" />
-            <Label Text="Select the bank that you wish to top-up from" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center" FontSize="Micro" Grid.ColumnSpan="2" />
+            <Label Text="Online Banking (POLi)" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" FontSize="Large" FontAttributes="Bold" Grid.ColumnSpan="2" />
+            <Label Text="Select the bank that you wish to top-up from" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center" FontSize="Small" Grid.ColumnSpan="2" />
 
             <ImageButton x:Name="ANZ" Source="ANZButton.png" Clicked="ANZButtonClicked" Aspect="AspectFit"  Grid.Row="2" Grid.Column="1"/>
             <ImageButton x:Name="ASB" Source="ASBButton.png" Clicked="ASBButtonClicked" Aspect="AspectFit"  Grid.Row="2" Grid.Column="2"/>
             <ImageButton x:Name="BNZ" Source="BNZButton.png" Clicked="BNZButtonClicked" Aspect="AspectFit"  Grid.Row="3" Grid.Column="1"/>
             <ImageButton x:Name="Kiwibank" Source="KiwibankButton.png" Clicked="KiwibankButtonClicked" Aspect="AspectFit"  Grid.Row="3" Grid.Column="2"/>
 
-            <Label Text="Top-Up" Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Micro" Grid.ColumnSpan="2" />
+            <Label Text="Top-Up" Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large" Grid.ColumnSpan="2" />
             <!--<Label x:Name="balanceEntry" Text="$0.00" Grid.Row="4" Grid.Column="3" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="Micro"/>-->
 
-            <Picker x:Name="picker" Grid.Row="4" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" FontSize="Micro" Title="Select amount" TitleColor="Gray">
+            <Picker x:Name="picker" Grid.Row="4" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" FontSize="Large" Title="Select amount" TitleColor="Gray">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>$5</x:String>
@@ -48,13 +49,8 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Button Text="Proceed to Paymark" Clicked="PaymarkButtonClicked" TextColor="White" BackgroundColor="DarkTurquoise" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="20"></Button>
-        
+            <Button Text="Proceed to Paymark" Clicked="PaymarkButtonClicked" TextColor="White" BackgroundColor="DarkTurquoise" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="40"></Button>
+
         </Grid>
     </ContentPage.Content>
-
-
-
-
-
 </ContentPage>

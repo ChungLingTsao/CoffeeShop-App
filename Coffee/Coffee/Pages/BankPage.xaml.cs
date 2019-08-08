@@ -60,7 +60,7 @@ namespace Coffee.Pages
                 await DisplayAlert("Warning", "Please select a bank provider!", "OK");
             }
 
-            else if (topupSelected == false)
+            if (topupSelected == false)
             {
                 await DisplayAlert("Warning", "Please select a top-up amount!", "OK");
             }
