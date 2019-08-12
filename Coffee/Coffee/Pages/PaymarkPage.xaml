@@ -7,6 +7,7 @@
              x:Class="Coffee.Pages.PaymarkPage"
              Title="Paymark Page"
              NavigationPage.HasNavigationBar="false">
+    
     <ContentPage.Content>
         <Grid x:Name="controlGrid" RowSpacing="0" ColumnSpacing="0">
 

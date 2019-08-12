@@ -5,6 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              x:Class="Coffee.Pages.BankPage"
              Title="Bank Page">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" IconImageSource="BalanceIcon.png" Priority="0" />
+        <ToolbarItem Order="Primary" Text="{Binding Balance, Mode=OneWay, StringFormat='${0:F0}.00'}" Priority="0" />
+    </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <Grid x:Name="controlGrid" RowSpacing="5" ColumnSpacing="10">
