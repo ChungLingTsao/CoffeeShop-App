@@ -29,8 +29,9 @@ namespace Coffee.Pages
         }
 
         private void AddCoffee(object sender, EventArgs e)
-        {    
+        {
             DisplayAlert("Coffee Added", "Don't forget to click Place Order when done", "OK");
+            
         }
 
         private void ButtonEspressoAdd(object sender, EventArgs e)
@@ -45,6 +46,7 @@ namespace Coffee.Pages
 
         private void ButtonLongBlackAdd(object sender, EventArgs e)
         {
+
             var type = "Long Black";
             var button = (Button)sender;
             var size = button.Text;
@@ -131,6 +133,7 @@ namespace Coffee.Pages
             coffeeListText += String.Format("{2}{0} {1}", type, size, Environment.NewLine);
             OrderList.Text = coffeeListText;
 
+            await DisplayActionSheet("Customise your coffee?", "Cancel", null, "Standard "+type, "Sugar", "Soy", "Sugar & Soy");
             await DisplayAlert(text, "Place Order when done adding items", "OK");
         }
 
