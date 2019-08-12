@@ -15,7 +15,7 @@
                 <Label Text=" "
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-                <Label Text="1x Flat White&#x0a;2x Long Black&#x0a;1x Espresso"
+                <Label x:Name="DisplayCoffee" Text="1x Flat White&#x0a;2x Long Black&#x0a;1x Espresso"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             </StackLayout>
@@ -27,9 +27,15 @@
             </StackLayout>
             <StackLayout>
 
-                <Label FontSize="Large" Text="CONGRATULATIONS&#x0a;YOU HAVE NOW&#x0a;EARNED A FREE COFFEE" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+                <Label x:Name="DisplaySpecial" FontSize="Large" 
+                       Text="CONGRATULATIONS&#x0a;YOU HAVE NOW&#x0a;EARNED A FREE COFFEE" 
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
 
-                <Button Text="Return to Home Page" Clicked="ReturnButtonClicked" TextColor="White" BackgroundColor="DarkTurquoise" Grid.Row="1" Grid.Column="0" CornerRadius="20" Margin="10, 10, 10, 10"></Button>
+                <Button Text="Return to Home Page" Clicked="ReturnButtonClicked" 
+                        TextColor="White" BackgroundColor="DarkTurquoise" 
+                        Grid.Row="1" Grid.Column="0" CornerRadius="20" 
+                        Margin="10, 10, 10, 10" 
+                        HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
