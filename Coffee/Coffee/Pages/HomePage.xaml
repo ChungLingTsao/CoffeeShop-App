@@ -5,6 +5,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Coffee.Pages.HomePage">
+
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Order="Primary" IconImageSource="BalanceIcon.png" Priority="0" />
+        <ToolbarItem x:Name="HomeBalance" Order="Primary" Text="{Binding Balance, Mode=OneWay, StringFormat='${0:F0}.00'}" Priority="0" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Resources>
         <Style TargetType="Button"
                ApplyToDerivedTypes="True"
@@ -14,10 +20,15 @@
             <Setter Property="TextColor" Value="{StaticResource AppTextColor}" />
             <Setter Property="BorderRadius" Value="5" />
         </Style>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <Label x:Name="UserName" Text="{Binding UserName, Mode=OneWay}" HorizontalOptions="CenterAndExpand"/>
+            <!--<Label x:Name="BalanceText" Text="{Binding Balance, Mode=OneWay}" HorizontalOptions="CenterAndExpand"
+                   Style="{StaticResource LabelStyle}" />-->
             <Button
                     Text="Order Coffee"
                     Clicked="OnOrderCoffeeButtonClicked"

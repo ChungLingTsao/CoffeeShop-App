@@ -24,6 +24,9 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Margin="20">
+            <Image Source="logo.PNG"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"/>
             <Entry Placeholder="Username"
                 x:Name="LoginUserNameEntry"
                 HeightRequest="50" />
@@ -41,6 +44,12 @@
                     Clicked="OnRegisterButtonClicked"
                     HeightRequest="50"
                     HorizontalOptions="Center"/>
+            <Button
+                    Text="Delete Data"
+                    Clicked="OnDeleteDataButtonClicked"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

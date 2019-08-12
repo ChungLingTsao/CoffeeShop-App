@@ -26,10 +26,14 @@ namespace Coffee.Pages
             if (customer != null)
             {
                 Console.WriteLine(customer.UserName, customer.ID);
-                await Navigation.PushAsync(new HomePage
+                App.Current.MainPage = new NavigationPage( new HomePage
                 {
                     BindingContext = customer as Customer
                 });
+                //await Navigation.PushAsync(new HomePage
+                //{
+                //    BindingContext = customer as Customer
+                //});
             }
             else
             {
@@ -45,6 +49,12 @@ namespace Coffee.Pages
             {
                 BindingContext = new Customer()
             });
+        }
+
+        async void OnDeleteDataButtonClicked(object sender, EventArgs e)
+        {
+            Console.WriteLine("Delete All Data");
+            await App.Database.DeleteAllData();
         }
     }
 }

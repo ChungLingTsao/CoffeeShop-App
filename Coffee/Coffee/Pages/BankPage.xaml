@@ -5,74 +5,57 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              x:Class="Coffee.Pages.BankPage"
              Title="Bank Page">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" IconImageSource="BalanceIcon.png" Priority="0" />
+        <ToolbarItem Order="Primary" Text="{Binding Balance, Mode=OneWay, StringFormat='${0:F0}.00'}" Priority="0" />
+    </ContentPage.ToolbarItems>
 
-    <StackLayout>
-        <!--<Image x:Name="img" Source="ANZLogo.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image> 
-        <Button Text="test"
-            Clicked="ButtonClicked" /> -->
-        <Label x:Name="heading"
-            Text="Please select bank provider"
-            HorizontalOptions="Center"
-            VerticalOptions="Start" 
-            Margin="10, 10, 10, 10"/>               
-        <ImageButton Source="ANZlogo.png"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Clicked="ANZButtonClicked" />
-        <ImageButton Source="ASBlogo.png"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Clicked="ASBButtonClicked" />
-        <ImageButton Source="BNZlogo.png"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Clicked="BNZButtonClicked" />
-        <ImageButton Source="Kiwibanklogo.png"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Clicked="KiwibankButtonClicked" />
-        <Label HeightRequest="5"/>
-<!--        <BoxView 
-            HeightRequest="1" 
-            BackgroundColor="Black" 
-            VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand" />
--->
- <!--       <Frame BorderColor="Black"
-            Margin="8, 10, 8, 0">
-            <Label x:Name="topup"
-                Text="Top up value:"
-                HorizontalOptions="Start"
-                VerticalOptions="Start" />
-        </Frame> -->
+    <ContentPage.Content>
+        <Grid x:Name="controlGrid" RowSpacing="5" ColumnSpacing="10">
 
-        <Label x:Name="label"
-            Text="No bank provider selected"
-            TextColor="Black"
-            FontSize="Small"
-            HorizontalOptions="Center"
-            VerticalOptions="Center" />
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="170" />
+                <RowDefinition Height="170" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-        <Picker x:Name="picker"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                FontSize="Small"
-                Title="Top up value"
-                TitleColor="Gray">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>$5</x:String>
-                    <x:String>$10</x:String>
-                    <x:String>$20</x:String>
-                    <x:String>$50</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="170" />
+                <ColumnDefinition Width="170" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-        <Button Text="Proceed to Paymark"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Center"
-                Clicked="PaymarkButtonClicked" />
-        
-    </StackLayout>
+            <Label Text="Online Banking (POLi)" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start"  VerticalTextAlignment="End" FontSize="Large" FontAttributes="Bold" Grid.ColumnSpan="2" />
+            <Label Text="Select the bank that you wish to top-up from" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center" FontSize="Small" Grid.ColumnSpan="2" />
+
+            <ImageButton x:Name="ANZ" Source="ANZButton.png" Clicked="ANZButtonClicked" Aspect="AspectFit"  Grid.Row="2" Grid.Column="1"/>
+            <ImageButton x:Name="ASB" Source="ASBButton.png" Clicked="ASBButtonClicked" Aspect="AspectFit"  Grid.Row="2" Grid.Column="2"/>
+            <ImageButton x:Name="BNZ" Source="BNZButton.png" Clicked="BNZButtonClicked" Aspect="AspectFit"  Grid.Row="3" Grid.Column="1"/>
+            <ImageButton x:Name="Kiwibank" Source="KiwibankButton.png" Clicked="KiwibankButtonClicked" Aspect="AspectFit"  Grid.Row="3" Grid.Column="2"/>
+
+            <Label Text="Top-Up" Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large" Grid.ColumnSpan="2" />
+            <!--<Label x:Name="balanceEntry" Text="$0.00" Grid.Row="4" Grid.Column="3" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="Micro"/>-->
+
+            <Picker x:Name="picker" Grid.Row="4" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" FontSize="Large" Title="Select amount" TitleColor="Gray">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>$5</x:String>
+                        <x:String>$10</x:String>
+                        <x:String>$20</x:String>
+                        <x:String>$50</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button Text="Proceed to Paymark" Clicked="PaymarkButtonClicked" TextColor="White" BackgroundColor="DarkTurquoise" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="40"></Button>
+
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
