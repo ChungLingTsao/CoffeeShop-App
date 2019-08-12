@@ -1626,6 +1626,3 @@ D:\DEV\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\android\assets\Xamarin.
 D:\DEV\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.Android.pdb
 D:\DEV\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.pdb
 D:\DEV\CoffeeShop-App\Coffee\Coffee\bin\Debug\netstandard2.0\Coffee.dll
-D:\DEV\CoffeeShop-App\Coffee\Coffee.Android\bin\Debug\Coffee.dll.mdb
-D:\DEV\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\linksrc\Coffee.dll.mdb
-D:\DEV\CoffeeShop-App\Coffee\Coffee.Android\obj\Debug\90\linksrc\Xamarin.Essentials.dll.mdb
