@@ -14,6 +14,8 @@ namespace Coffee.Models
         public string Password { get; set; }
         public string EmailAddress { get; set; }
         public int Balance { get; set; }
+        public int SpecialCount { get; set; }
+        public Boolean SpecialEnabled { get; set; }
 
 
     }

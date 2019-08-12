@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Coffee.Models;
 
 namespace Coffee.Pages
 {
@@ -15,6 +16,14 @@ namespace Coffee.Pages
         public HomePage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var customer = (Customer)BindingContext;
+            HomeBalance.Text = String.Format("${0}.00", customer.Balance);
+            //BalanceText.Text = String.Format("${0}", customer.Balance);
         }
 
         async void OnOrderCoffeeButtonClicked(object sender, EventArgs e)
@@ -38,10 +47,11 @@ namespace Coffee.Pages
         async void OnAccountDetailsButtonClicked(object sender, EventArgs e)
         {
             Console.WriteLine("Account Details");
-            await Navigation.PushAsync(new TransactionPage
+            await Navigation.PushAsync(new DetailsPage
             {
                 BindingContext = this.BindingContext
             });
         }
+
     }
 }

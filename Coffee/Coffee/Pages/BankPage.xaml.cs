@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Coffee.Models;
+using SQLite;
 
 namespace Coffee.Pages
 {
@@ -14,55 +15,96 @@ namespace Coffee.Pages
     public partial class BankPage : ContentPage
     {
         string bankSelected;
-        
+        string pickerSelected;
+        Boolean topupSelected = false;
+
+        //public Customer customer;
+        //float balance = 5.00f;
 
         public BankPage()
         {
             InitializeComponent();
-
-            List<int> amounts = new List<int>();
-            amounts.Add(5);
-            amounts.Add(10);
-            amounts.Add(20);
-            amounts.Add(50);
-        }
-
-        void tapImage_Tapped(object sender, EventArgs e)
-        {
-            // handle the tap    
-            DisplayAlert("Alert", "This is an image button", "OK");
+            ResetBankButtonsOpacity();
+            picker.SelectedIndexChanged += this.PickerSelectedIndexChanged;
         }
 
         void ANZButtonClicked(object sender, EventArgs e)
         {
-            bankSelected = "ANZ";
-            label.Text = $"{bankSelected} selected";
-
+            ResetBankButtonsOpacity();
+            SetSelectedBank("ANZ", ANZ);
         }
         void ASBButtonClicked(object sender, EventArgs e)
         {
-            bankSelected = "ASB";
-            label.Text = $"{bankSelected} selected";
+            ResetBankButtonsOpacity();
+            SetSelectedBank("ASB", ASB);
         }
 
         void BNZButtonClicked(object sender, EventArgs e)
         {
-            bankSelected = "BNZ";
-            label.Text = $"{bankSelected} selected";
+            ResetBankButtonsOpacity();
+            SetSelectedBank("BNZ", BNZ);
         }
+
         void KiwibankButtonClicked(object sender, EventArgs e)
         {
-            bankSelected = "Kiwibank";
-            label.Text = $"{bankSelected} selected";
+            ResetBankButtonsOpacity();
+            SetSelectedBank("Kiwibank", Kiwibank);
         }
-        void PaymarkButtonClicked(object sender, EventArgs e)
-        {
-            var customer = (Customer)BindingContext;
-            int amount = Int32.Parse(picker.SelectedItem.ToString().Substring(1));
-            customer.Balance += amount;
-            App.Database.SaveCustomer(customer);
 
-            Navigation.PushAsync(new PaymarkPage());
+        async void PaymarkButtonClicked(object sender, EventArgs e)
+        {
+            if (bankSelected == null && topupSelected == false)
+            {
+                await DisplayAlert("Warning", "Please select a bank provider and top-up amount!", "OK");
+            }
+
+            else if (bankSelected == null)
+            {
+                await DisplayAlert("Warning", "Please select a bank provider!", "OK");
+            }
+
+            else if (topupSelected == false)
+            {
+                await DisplayAlert("Warning", "Please select a top-up amount!", "OK");
+            }
+        
+            else
+            {
+                var customer = (Customer)BindingContext;
+                int amount = Int32.Parse(picker.SelectedItem.ToString().Substring(1));
+                customer.Balance += amount;
+                Console.WriteLine(amount);
+                await App.Database.SaveCustomer(customer);
+                await Navigation.PushAsync(new PaymarkPage(bankSelected, pickerSelected));
+            }
+        }
+
+        void ResetBankButtonsOpacity()
+        {
+            ANZ.Opacity = 0.25;
+            ASB.Opacity = 0.25;
+            BNZ.Opacity = 0.25;
+            Kiwibank.Opacity = 0.25;
+        }
+
+        void SetSelectedBank(String stringBank, ImageButton currentBank)
+        {
+            if (bankSelected == stringBank)
+            {
+                bankSelected = null;
+            }
+            else
+            {
+                bankSelected = stringBank;
+                currentBank.Opacity = 1;
+            }
+        }
+
+        void PickerSelectedIndexChanged(object sender, EventArgs e)
+        {           
+            //Method call every time when picker selection changed.
+            pickerSelected = picker.SelectedItem.ToString(); // Retrieves selected item of picker
+            topupSelected = true;
         }
     }
 }

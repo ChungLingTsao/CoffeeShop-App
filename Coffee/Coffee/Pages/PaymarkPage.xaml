@@ -5,15 +5,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Coffee.Pages.PaymarkPage"
-             Title="Paymark Page">
+             Title="Paymark Page"
+             NavigationPage.HasNavigationBar="false">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Return to Home Page"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Center"
-                BackgroundColor="Green"
-                Clicked="ReturnButtonClicked" />
-            <Image Source="Paymark.png" />
-        </StackLayout>
+        <Grid x:Name="controlGrid" RowSpacing="0" ColumnSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="560" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="Paymark.png" Grid.Row="0" Grid.Column="1"/>
+            <Button Text="Return to Home Page" Clicked="ReturnButtonClicked" TextColor="White" BackgroundColor="DarkTurquoise" Grid.Row="1" Grid.Column="1" CornerRadius="40"></Button>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
