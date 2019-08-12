@@ -34,6 +34,10 @@
                     Clicked="OnOrderCoffeeButtonClicked"
                     HeightRequest="50"/>
             <Button
+                    Text="Order Doughnut"
+                    Clicked="OnOrderDoughnutButtonClicked"
+                    HeightRequest="50"/>
+            <Button
                     Text="Top Up"
                     Clicked="OnTopUpButtonClicked"
                     HeightRequest="50"/>

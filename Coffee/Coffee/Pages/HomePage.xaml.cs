@@ -35,6 +35,16 @@ namespace Coffee.Pages
             });
         }
 
+        async void OnOrderDoughnutButtonClicked(object sender, EventArgs e)
+        {
+            Console.WriteLine("Order Doughnut");
+            await Navigation.PushAsync(new DoughnutSelectPage
+            {
+                BindingContext = this.BindingContext
+            });
+        }
+
+
         async void OnTopUpButtonClicked(object sender, EventArgs e)
         {
             Console.WriteLine("Top Up");
