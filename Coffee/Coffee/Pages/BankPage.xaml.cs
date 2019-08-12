@@ -14,10 +14,8 @@ namespace Coffee.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BankPage : ContentPage
     {
-        
         string bankSelected;
         string pickerSelected;
-        double topupAmount = 0.00f;
         Boolean topupSelected = false;
 
         //public Customer customer;
@@ -55,12 +53,17 @@ namespace Coffee.Pages
 
         async void PaymarkButtonClicked(object sender, EventArgs e)
         {
-            if (bankSelected == null)
+            if (bankSelected == null && topupSelected == false)
+            {
+                await DisplayAlert("Warning", "Please select a bank provider and top-up amount!", "OK");
+            }
+
+            else if (bankSelected == null)
             {
                 await DisplayAlert("Warning", "Please select a bank provider!", "OK");
             }
 
-            if (topupSelected == false)
+            else if (topupSelected == false)
             {
                 await DisplayAlert("Warning", "Please select a top-up amount!", "OK");
             }
@@ -101,7 +104,6 @@ namespace Coffee.Pages
         {           
             //Method call every time when picker selection changed.
             pickerSelected = picker.SelectedItem.ToString(); // Retrieves selected item of picker
-            //topupAmount = Convert.ToDouble(pickerSelected.Remove(0, 1)); // Converts the selected picker item to a float by removing the '$' sign
             topupSelected = true;
         }
     }

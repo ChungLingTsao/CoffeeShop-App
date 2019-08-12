@@ -51,5 +51,6 @@ namespace Coffee.Pages
                 BindingContext = this.BindingContext
             });
         }
+
     }
 }
