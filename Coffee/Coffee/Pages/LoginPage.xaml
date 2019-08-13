@@ -45,6 +45,12 @@
                     HeightRequest="50"
                     HorizontalOptions="Center"/>
             <Button
+                    Text="Forgot Password"
+                    Clicked="OnForgotPasswordButtonClicked"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"/>
+            <Button
                     Text="Delete Data"
                     Clicked="OnDeleteDataButtonClicked"
                     HeightRequest="50"

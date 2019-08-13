@@ -96,9 +96,18 @@ namespace Coffee.Data
                 .FirstOrDefaultAsync();
         }
 
-        public Task<Customer> UserNameExists(string username)
+        public Task<Customer> UserNameExists(string username, string email)
         {
-            return _database.Table<Customer>().Where(i => i.UserName == username).FirstOrDefaultAsync();
+            return _database.Table<Customer>()
+                .Where(i => i.UserName == username && i.EmailAddress == email)
+                .FirstOrDefaultAsync();
+        }
+
+        public Task<Customer> ChangePasswordFromEmail(string email)
+        {
+            return _database.Table<Customer>()
+                .Where(i => i.EmailAddress == email)
+                .FirstOrDefaultAsync();
         }
 
     }

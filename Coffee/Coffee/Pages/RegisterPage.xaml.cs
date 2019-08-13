@@ -18,22 +18,34 @@ namespace Coffee.Pages
             InitializeComponent();
         }
 
+        public Boolean DetailsFilledIn()
+        {
+            return (Username.Text != "" && Name.Text != "" && EmailAddress.Text != "" && Password.Text == "");
+        }
+
         async void OnSignUpButtonClicked(object sender, EventArgs e)
         {
             Console.WriteLine("Sign Up");
-            var customer = (Customer)BindingContext;
-            Console.WriteLine(customer.UserName);
-            var checkCustomer = await App.Database.UserNameExists(customer.UserName);
-            if (checkCustomer != null)
+            if (true)
             {
-                await DisplayAlert("Error", "Username already exists", "OK");
+                var customer = (Customer)BindingContext;
+                var checkCustomer = await App.Database.UserNameExists(customer.UserName, customer.EmailAddress);
+                if (checkCustomer != null)
+                {
+                    await DisplayAlert("Error", "Username and/or Email already exists", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Complete", "User has been created", "OK");
+                    await App.Database.SaveCustomer(customer);
+                    await Navigation.PopAsync();
+                }
             }
             else
             {
-                await DisplayAlert("Complete", "User has been created", "OK");
-                await App.Database.SaveCustomer(customer);
-                await Navigation.PopAsync();
-            }          
+                await DisplayAlert("Error", "Please fill in all details", "OK");
+            }
+                     
         }
     }
 }

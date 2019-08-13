@@ -17,23 +17,30 @@
                ApplyToDerivedTypes="True"
                CanCascade="True">
             <Setter Property="FontSize" Value="Medium" />
-            <Setter Property="BackgroundColor" Value="#676CFB" />
-            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="{StaticResource AndroidButtonBackgroundColor}" />
+            <Setter Property="TextColor" Value="{StaticResource AppTextColor}" />
             <Setter Property="BorderRadius" Value="5" />
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <Entry Placeholder="Username"
+            <Image Source="logo.PNG"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"/>
+            <Entry x:Name="Username"
+                Placeholder="Username"
                 Text="{Binding UserName}"
                 HeightRequest="50" />
             <Entry Placeholder="Name"
+                x:Name="Name"
                 Text="{Binding Name}"
                 HeightRequest="50" />
             <Entry Placeholder="Email Address"
+                   x:Name="EmailAddress"
                 Text="{Binding EmailAddress}"
                 HeightRequest="50" />
             <Entry Placeholder="Password"
+                   x:Name="Password"
                 Text="{Binding Password}"
                 HeightRequest="50" 
                 IsPassword="True"/>
