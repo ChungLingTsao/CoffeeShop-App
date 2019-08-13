@@ -38,41 +38,24 @@
 
 
             <Image Source="cup.PNG" Aspect="AspectFit"  Grid.Row="1" Grid.Column="0"/>
-            <Label Text="Plane" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="1" Grid.Column="1"/>
-            <Label x:Name="PlaneCost" Text="$5.00" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium" Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="3" />
-            <Button Text="ADD" Clicked="ButtonLongBlackAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="1" Grid.Column="5"></Button>
+            <Label Text="Plain" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="1" Grid.Column="1"/>
+            <Label x:Name="PlainCost" Text="$5.00" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium" Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="3" />
+                <Button Text="ADD" Clicked="ButtonPlainAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2"></Button>
 
             <Image Source="cup.PNG" Aspect="AspectFit"  Grid.Row="2" Grid.Column="0"/>
             <Label Text="Chocolate" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" />
             <Label x:Name="ChocolateCost" Text="$6.00" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium" Grid.Row="2" Grid.Column="2"  Grid.ColumnSpan="3" />
-            <Button Text="ADD" Clicked="ButtonLongBlackAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="2" Grid.Column="5"></Button>
+                <Button Text="ADD" Clicked="ButtonChocolateAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2"></Button>
 
             <Image Source="cup.PNG" Aspect="AspectFit"   Grid.Row="3" Grid.Column="0"/>
             <Label Text="Strawberry" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4"/>
             <Label x:Name="StrawberryCost" Text="$7.00" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium" Grid.Row="3" Grid.Column="2"  Grid.ColumnSpan="3" />
-            <Button Text="ADD" Clicked="ButtonCappuccinoAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="3" Grid.Column="5"></Button>
+                <Button Text="ADD" Clicked="ButtonStrawberryAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2"></Button>
 
-            <!--<Image Source="cup.PNG" Aspect="AspectFit"   Grid.Row="4" Grid.Column="0" />
-            <Label Text="Latte" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4"/>
-            <Label x:Name="LatteCost" Text="$5.00" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium" Grid.Row="4" Grid.Column="2"  Grid.ColumnSpan="3" />
-            <Button Text="S" Clicked="ButtonLatteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="4" Grid.Column="3"></Button>
-            <Button Text="M" Clicked="ButtonLatteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="4" Grid.Column="4"></Button>
-            <Button Text="L" Clicked="ButtonLatteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="4" Grid.Column="5"></Button>
-
-            <Image Source="cup.PNG" Aspect="AspectFit"   Grid.Row="5" Grid.Column="0" />
-            <Label Text="Flat White" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4"/>
-            <Label x:Name="FlatWhiteCost" Text="$4.00" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium" Grid.Row="5" Grid.Column="2"  Grid.ColumnSpan="3" />
-            <Button Text="S" Clicked="ButtonFlatWhiteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="5" Grid.Column="3"></Button>
-            <Button Text="M" Clicked="ButtonFlatWhiteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="5" Grid.Column="4"></Button>
-            <Button Text="L" Clicked="ButtonFlatWhiteAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="5" Grid.Column="5"></Button>-->
-
-
-            
 
 
 
         </Grid>
-        <Label  x:Name="testLabel" FontSize="Medium" Text="FREE COOKIE WITH CAPPUCCINO TUESDAY" HorizontalOptions="Center"/>
         <Label  x:Name="OrderList" FontSize="Medium" Text="Order List:" HorizontalOptions="Center"/>
         <Button Text="Place Order" Clicked="ButtonPlaceOrder" VerticalOptions="EndAndExpand"></Button>
         </StackLayout>

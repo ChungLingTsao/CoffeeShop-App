@@ -14,95 +14,52 @@ namespace Coffee.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DoughnutSelectPage : ContentPage
     {
-        public static List<CoffeeData> coffeeList;
-        public static Order neworder;
+        //   // FOR TESTING
+//        public static List<DoughnutData> doughnutList;
+        public static string doughnutListText;
 
-        public static Boolean canOrder = false;
-        public static string coffeeListText;
+        public static Order neworder;
+        public static Boolean canOrder = true;  
+
         public DoughnutSelectPage()
         {
             InitializeComponent();
             neworder = new Order();
-            coffeeList = new List<CoffeeData>();
-            coffeeListText = "Order List:";
+//            doughnutList = new List<DoughnutData>();
+          doughnutListText = "Order List:";
             Console.WriteLine("new page test");
         }
 
-        private void AddCoffee(object sender, EventArgs e)
+        private void AddDoughnutCoffee(object sender, EventArgs e)
         {
-            DisplayAlert("Coffee Added", "Don't forget to click Place Order when done", "OK");
+            DisplayAlert("Doughnut Added", "Don't forget to click Place Order when done", "OK");
             
         }
 
-        private void ButtonEspressoAdd(object sender, EventArgs e)
+        private void ButtonPlainAdd(object sender, EventArgs e)
         {
-            var type = "Espresso";
-            var button = (Button)sender;
-            var size = button.Text;
+            var type = "Plain";
             int cost = 5;
-            size = GetNiceSize(size);
-            if (canPurchase(cost)) CoffeeAdd(type, size, cost);
+            if (canPurchase(cost)) DoughnutAdd(type, cost);
         }
 
-        private void ButtonLongBlackAdd(object sender, EventArgs e)
+        private void ButtonChocolateAdd(object sender, EventArgs e)
         {
 
-            var type = "Long Black";
-            var button = (Button)sender;
-            var size = button.Text;
+            var type = "Chocolate";
             int cost = 6;
-            size = GetNiceSize(size);
-            if (canPurchase(cost)) CoffeeAdd(type, size, cost);
+            if (canPurchase(cost)) DoughnutAdd(type, cost);
         }
 
-        private void ButtonCappuccinoAdd(object sender, EventArgs e)
+        private void ButtonStrawberryAdd(object sender, EventArgs e)
         {
-            var type = "Cappuccino";
-            var button = (Button)sender;
-            var size = button.Text;
+            var type = "Strawberry";
             int cost = 7;
-            size = GetNiceSize(size);
-            if (canPurchase(cost)) CoffeeAdd(type, size, cost);
+            if (canPurchase(cost)) DoughnutAdd(type, cost);
         }
 
-        private void ButtonLatteAdd(object sender, EventArgs e)
-        {
-            var type = "Latte";
-            var button = (Button)sender;
-            var size = button.Text;
-            int cost = 5;
-            size = GetNiceSize(size);
-            if (canPurchase(cost)) CoffeeAdd(type, size, cost);
-        }
+       
 
-        private void ButtonFlatWhiteAdd(object sender, EventArgs e)
-        {
-            var type = "Flat White";
-            var button = (Button)sender;
-            var size = button.Text;
-            int cost = 4;
-            size = GetNiceSize(size);
-            if(canPurchase(cost)) CoffeeAdd(type, size, cost);
-        }
-
-        private string GetNiceSize(string s)
-        {
-            var size = "";
-
-            if (s == "S")
-            {
-                size = "Small ";
-            }
-            else if (s == "M")
-            {
-                size = "Medium ";
-            }
-            else if (s == "L")
-            {
-                size = "Large ";
-            }
-            return size;
-        }
 
         public Boolean canPurchase(int cost)
         {
@@ -116,24 +73,23 @@ namespace Coffee.Pages
             return true;       
         }
 
-        private async void CoffeeAdd(string type, string size, int cost)
+        private async void DoughnutAdd(string type, int cost)
         {
             canOrder = true;
-            await App.Database.SaveOrder(neworder);
-            var newcoffee = new CoffeeData
-            {
-                OrderID = neworder.ID,
-                CoffeeName = type,
-                Size = size,
-                Cost = cost
-            };
-            coffeeList.Add(newcoffee);
-            var text = size + type + " added to your order";
+            //await App.Database.SaveOrder(neworder);
+            //var newcoffee = new CoffeeData
+            //{
+            //    OrderID = neworder.ID,
+            //    CoffeeName = type,
+            //    Size = size,
+            //    Cost = cost
+            //};
+            //doughnutList.Add(newDoughnut);
+            var text = type + " doughnut added to your order";
 
-            coffeeListText += String.Format("{2}{0} {1}", type, size, Environment.NewLine);
-            OrderList.Text = coffeeListText;
+            doughnutListText += String.Format("{1}{0}", type, Environment.NewLine);
+            OrderList.Text = doughnutListText;
 
-            await DisplayActionSheet("Customise your coffee?", "Cancel", null, "Standard "+type, "Sugar", "Soy", "Sugar & Soy");
             await DisplayAlert(text, "Place Order when done adding items", "OK");
         }
 
@@ -152,28 +108,32 @@ namespace Coffee.Pages
 
         private async void ButtonPlaceOrder(object sender, EventArgs e)
         {
-            if (canOrder)
-            {
-                canOrder = false;
-                foreach (var coffee in coffeeList)
-                {
-                    neworder.TotalCost += coffee.Cost;
-                    await App.Database.SaveCoffee(coffee);
-                }
-                var customer = (Customer)BindingContext;
-                customer.SpecialCount += coffeeList.Count;
-                checkSpecials(customer);
-                neworder.CustomerID = customer.ID;
-                neworder.orderTime = DateTime.Now;
-                await App.Database.SaveCustomer(customer);
-                await App.Database.SaveOrder(neworder);
-                await Navigation.PushAsync(new CoffeeConfirmPage(coffeeList, customer));
-            }
-            else
-            {
-                await DisplayAlert("Error", "Please add a coffee to your order", "OK");
-            }
-            
+
+
+           // await Navigation.PushAsync(new DoughnutConfirmPage( customer));
+
+            //if (canOrder)
+            //{
+            //    canOrder = false;
+            //    foreach (var doughnut in doughnutList)
+            //    {
+            //        neworder.TotalCost += doughnut.Cost;
+            //        await App.Database.SaveDoughnut(doughnut);
+            //    }
+            //    var customer = (Customer)BindingContext;
+            //    customer.SpecialCount += doughnutList.Count;
+            //    checkSpecials(customer);
+            //    neworder.CustomerID = customer.ID;
+            //    neworder.orderTime = DateTime.Now;
+            //    await App.Database.SaveCustomer(customer);
+            //    await App.Database.SaveOrder(neworder);
+            //    await Navigation.PushAsync(new DoughnutConfirmPage(doughnutList, customer));
+            //}
+            //else
+            //{
+            //    await DisplayAlert("Error", "Please add a doughnut to your order", "OK");
+            //}
+
         }
     }
 
