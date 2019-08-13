@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>coffee_emulator</SelectedDevice>
     <DefaultDevice>coffee_emulator</DefaultDevice>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

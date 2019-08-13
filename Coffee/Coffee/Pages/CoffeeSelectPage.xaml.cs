@@ -104,6 +104,28 @@ namespace Coffee.Pages
             return size;
         }
 
+        public static (bool, bool) GetSugarSoyOption(string option)
+        {
+            bool Sugar = false;
+            bool Soy = false;
+
+            if (option == "Sugar")
+            {
+                Sugar = true;
+            }
+            else if (option == "SoyMilk")
+            {
+                Soy = true;
+            }
+            else if (option == "Sugar & SoyMilk")
+            {
+                Sugar = true;
+                Soy = true;
+            }
+
+            return (Sugar, Soy);
+        }
+
         public Boolean canPurchase(int cost)
         {
             var customer = (Customer)BindingContext;
@@ -119,22 +141,42 @@ namespace Coffee.Pages
         private async void CoffeeAdd(string type, string size, int cost)
         {
             canOrder = true;
-            await App.Database.SaveOrder(neworder);
-            var newcoffee = new CoffeeData
+            string action = await DisplayActionSheet("Customise your coffee?", "Cancel Order", null, "Standard " + type, "Sugar", "SoyMilk", "Sugar & SoyMilk");
+            (bool sugar, bool soy) = GetSugarSoyOption(action);
+
+            if (action == "Cancel Order" || action == null)
             {
-                OrderID = neworder.ID,
-                CoffeeName = type,
-                Size = size,
-                Cost = cost
-            };
-            coffeeList.Add(newcoffee);
-            var text = size + type + " added to your order";
+                await DisplayAlert("", "Order Cancelled", "OK");
+            }
 
-            coffeeListText += String.Format("{2}{0} {1}", type, size, Environment.NewLine);
-            OrderList.Text = coffeeListText;
+            else
+            {
+                await App.Database.SaveOrder(neworder);
 
-            await DisplayActionSheet("Customise your coffee?", "Cancel", null, "Standard "+type, "Sugar", "Soy", "Sugar & Soy");
-            await DisplayAlert(text, "Place Order when done adding items", "OK");
+                var newcoffee = new CoffeeData
+                {
+                    OrderID = neworder.ID,
+                    CoffeeName = type,
+                    Size = size,
+                    Cost = cost,
+                    SoyMilk = soy,
+                    Sugar = sugar
+                };
+
+                coffeeList.Add(newcoffee);
+
+                var text = String.Concat(size, type, " added to your order");
+
+                if (action == "Standard " + type)
+                {
+                    action = "Standard";
+                }
+
+                coffeeListText += String.Format("{2}{0} {1}({3})", type, size, Environment.NewLine, action);
+                OrderList.Text = coffeeListText;
+
+                await DisplayAlert(text, "Place Order when done adding items", "OK");
+            }
         }
 
         private void checkSpecials(Customer customer)
