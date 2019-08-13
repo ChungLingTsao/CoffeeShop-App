@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Motorola moto g%286%29</SelectedDevice>
     <DefaultDevice>coffee_emulator</DefaultDevice>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

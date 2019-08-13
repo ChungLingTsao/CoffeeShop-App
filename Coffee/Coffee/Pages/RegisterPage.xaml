@@ -44,11 +44,12 @@
                 Text="{Binding Password}"
                 HeightRequest="50" 
                 IsPassword="True"/>
-            <Button
-                    Text="Sign Up"
-                    Clicked="OnSignUpButtonClicked"
-                    HeightRequest="50"
-                    HorizontalOptions="Center"/>
+            <Button Text="Sign UP" Clicked="OnSignUpButtonClicked" 
+                TextColor="White" BackgroundColor="DarkTurquoise" 
+                CornerRadius="20" 
+                Margin="10, 10, 10, 10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

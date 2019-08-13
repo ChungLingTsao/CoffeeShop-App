@@ -11,37 +11,44 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
-                <Label Text="Thank you, your order has been received"
+            <StackLayout HeightRequest="50">
+                <Label Text="Thank you!"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-                
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"/>
             </StackLayout>
             <StackLayout>
-                <Label Text=" "
+                <Label Text="Your following order has been received:"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-                <Label x:Name="DisplayCoffee" Text="1x Flat White&#x0a;2x Long Black&#x0a;1x Espresso"
+                HorizontalOptions="StartAndExpand" 
+                Margin="10,10,10,10"/>
+
+                <Label x:Name="DisplayCoffee" 
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="StartAndExpand"
+                Margin="10,0,10,10"/>
+
             </StackLayout>
             <StackLayout>
-                
+                <BoxView BackgroundColor="DarkGray" HeightRequest="1" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
                 <Label Text="Your order will be ready to collect in 7 minutes"
+                FontSize="Medium"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+                <BoxView BackgroundColor="DarkGray" HeightRequest="1" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout>
-
                 <Label x:Name="DisplaySpecial" FontSize="Large" 
-                       Text="CONGRATULATIONS&#x0a;YOU HAVE NOW&#x0a;EARNED A FREE COFFEE" 
-                       VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
-
+                Text="CONGRATULATIONS&#x0a;YOU HAVE NOW&#x0a;EARNED A FREE COFFEE" 
+                VerticalOptions="Center" HorizontalOptions="Center" />
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
                 <Button Text="Return to Home Page" Clicked="ReturnButtonClicked" 
                         TextColor="White" BackgroundColor="DarkTurquoise" 
-                        Grid.Row="1" Grid.Column="0" CornerRadius="20" 
-                        Margin="10, 10, 10, 10" 
-                        HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Button>
+                        CornerRadius="20" 
+                        Margin="10, 10, 10, 10"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
