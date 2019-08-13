@@ -8,7 +8,16 @@
         <ToolbarItem Order="Primary" IconImageSource="BalanceIcon.png" Priority="0" />
         <ToolbarItem Order="Primary" Text="{Binding Balance, Mode=OneWay, StringFormat='${0:F0}.00'}" Priority="0" />
     </ContentPage.ToolbarItems>
-
+    <ContentPage.Resources>
+        <Style TargetType="Button"
+               ApplyToDerivedTypes="True"
+               CanCascade="True">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="BackgroundColor" Value="{StaticResource AndroidButtonBackgroundColor}" />
+            <Setter Property="TextColor" Value="{StaticResource AppTextColor}" />
+            <Setter Property="BorderRadius" Value="5" />
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
         <Grid x:Name="controlGrid" RowSpacing="2" ColumnSpacing="2">
@@ -81,7 +90,7 @@
         </Grid>
         <Label  x:Name="testLabel" FontSize="Medium" Text="FREE COOKIE WITH CAPPUCCINO TUESDAY" HorizontalOptions="Center"/>
         <Label  x:Name="OrderList" FontSize="Medium" Text="Order List:" HorizontalOptions="Center"/>
-        <Button Text="Place Order" Clicked="ButtonPlaceOrder" VerticalOptions="EndAndExpand"></Button>
+        <Button Text="Next" Clicked="ButtonPlaceOrder" VerticalOptions="EndAndExpand"></Button>
         </StackLayout>
 
         <!--</ScrollView>-->

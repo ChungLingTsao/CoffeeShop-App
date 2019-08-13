@@ -8,7 +8,16 @@
         <ToolbarItem Order="Primary" IconImageSource="BalanceIcon.png" Priority="0" />
         <ToolbarItem Order="Primary" Text="{Binding Balance, Mode=OneWay, StringFormat='${0:F0}.00'}" Priority="0" />
     </ContentPage.ToolbarItems>
-
+    <ContentPage.Resources>
+        <Style TargetType="Button"
+               ApplyToDerivedTypes="True"
+               CanCascade="True">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="BackgroundColor" Value="{StaticResource AndroidButtonBackgroundColor}" />
+            <Setter Property="TextColor" Value="{StaticResource AppTextColor}" />
+            <Setter Property="BorderRadius" Value="5" />
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
         <Grid x:Name="controlGrid" RowSpacing="2" ColumnSpacing="2">
@@ -37,17 +46,17 @@
 
 
 
-            <Image Source="cup.PNG" Aspect="AspectFit"  Grid.Row="1" Grid.Column="0"/>
+            <Image Source="doughnut.PNG" Aspect="AspectFit"  Grid.Row="1" Grid.Column="0"/>
             <Label Text="Plain" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="1" Grid.Column="1"/>
             <Label x:Name="PlainCost" Text="$5.00" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium" Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="3" />
                 <Button Text="ADD" Clicked="ButtonPlainAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2"></Button>
 
-            <Image Source="cup.PNG" Aspect="AspectFit"  Grid.Row="2" Grid.Column="0"/>
+                <Image Source="doughnut.PNG" Aspect="AspectFit"  Grid.Row="2" Grid.Column="0"/>
             <Label Text="Chocolate" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" />
             <Label x:Name="ChocolateCost" Text="$6.00" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium" Grid.Row="2" Grid.Column="2"  Grid.ColumnSpan="3" />
                 <Button Text="ADD" Clicked="ButtonChocolateAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2"></Button>
 
-            <Image Source="cup.PNG" Aspect="AspectFit"   Grid.Row="3" Grid.Column="0"/>
+                <Image Source="doughnut.PNG" Aspect="AspectFit"   Grid.Row="3" Grid.Column="0"/>
             <Label Text="Strawberry" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="Medium" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4"/>
             <Label x:Name="StrawberryCost" Text="$7.00" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium" Grid.Row="3" Grid.Column="2"  Grid.ColumnSpan="3" />
                 <Button Text="ADD" Clicked="ButtonStrawberryAdd" WidthRequest="30" HeightRequest="30" CornerRadius="15" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2"></Button>

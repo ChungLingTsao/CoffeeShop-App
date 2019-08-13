@@ -25,16 +25,11 @@ namespace Coffee.Pages
         {
             InitializeComponent();
             neworder = new Order();
-//            doughnutList = new List<DoughnutData>();
-          doughnutListText = "Order List:";
-            Console.WriteLine("new page test");
+//          doughnutList = new List<DoughnutData>();
+            doughnutListText = "Order List:";
+            Console.WriteLine("doughnut select page");
         }
 
-        private void AddDoughnutCoffee(object sender, EventArgs e)
-        {
-            DisplayAlert("Doughnut Added", "Don't forget to click Place Order when done", "OK");
-            
-        }
 
         private void ButtonPlainAdd(object sender, EventArgs e)
         {

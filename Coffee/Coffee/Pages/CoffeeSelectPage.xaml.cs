@@ -167,7 +167,10 @@ namespace Coffee.Pages
                 neworder.orderTime = DateTime.Now;
                 await App.Database.SaveCustomer(customer);
                 await App.Database.SaveOrder(neworder);
-                await Navigation.PushAsync(new CoffeeConfirmPage(coffeeList, customer));
+                //await Navigation.PushAsync(new CoffeeConfirmPage(coffeeList, customer));
+                await Navigation.PushAsync(new DoughnutSelectPage());
+                
+
             }
             else
             {
