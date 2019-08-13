@@ -6,7 +6,7 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Order="Primary" IconImageSource="BalanceIcon.png" Priority="0" />
-        <ToolbarItem Order="Primary" Text="{Binding Balance, Mode=OneWay, StringFormat='${0:F0}.00'}" Priority="0" />
+        <ToolbarItem x:Name="BalanceText" Order="Primary" Text="{Binding Balance, Mode=OneWay, StringFormat='${0:F0}.00'}" Priority="0" />
     </ContentPage.ToolbarItems>
     <ContentPage.Resources>
         <Style TargetType="Button"

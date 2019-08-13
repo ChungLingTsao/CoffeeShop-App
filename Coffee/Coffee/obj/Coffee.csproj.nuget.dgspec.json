@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chaz_\\source\\repos\\CoffeeShop-App\\Coffee\\Coffee\\Coffee.csproj": {}
+    "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee\\Coffee.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chaz_\\source\\repos\\CoffeeShop-App\\Coffee\\Coffee\\Coffee.csproj": {
+    "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee\\Coffee.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chaz_\\source\\repos\\CoffeeShop-App\\Coffee\\Coffee\\Coffee.csproj",
+        "projectUniqueName": "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee\\Coffee.csproj",
         "projectName": "Coffee",
-        "projectPath": "C:\\Users\\chaz_\\source\\repos\\CoffeeShop-App\\Coffee\\Coffee\\Coffee.csproj",
-        "packagesPath": "C:\\Users\\chaz_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chaz_\\source\\repos\\CoffeeShop-App\\Coffee\\Coffee\\obj\\",
+        "projectPath": "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee\\Coffee.csproj",
+        "packagesPath": "C:\\Users\\byron\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\byron\\Documents\\Visual Studio 2019\\Projects\\Coffee\\Coffee\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\chaz_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\byron\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

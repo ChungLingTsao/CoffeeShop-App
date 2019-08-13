@@ -38,10 +38,7 @@ namespace Coffee.Pages
         async void OnOrderDoughnutButtonClicked(object sender, EventArgs e)
         {
             Console.WriteLine("Order Doughnut");
-            await Navigation.PushAsync(new DoughnutSelectPage
-            {
-                BindingContext = this.BindingContext
-            });
+            await Navigation.PushAsync(new DoughnutSelectPage(this.BindingContext as Customer, new List<CoffeeData>(), new Order(), "Order List:"));
         }
 
 

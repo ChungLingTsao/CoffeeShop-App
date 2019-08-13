@@ -25,7 +25,6 @@ namespace Coffee.Pages
             neworder = new Order();
             coffeeList = new List<CoffeeData>();
             coffeeListText = "Order List:";
-            Console.WriteLine("new page test");
         }
 
         private void AddCoffee(object sender, EventArgs e)
@@ -112,7 +111,7 @@ namespace Coffee.Pages
                 DisplayAlert("Error", "You need to add funds to you balance", "OK");
                 return false;
             }
-            customer.Balance -= cost;
+            customer.Balance -= cost;           
             return true;       
         }
 
@@ -129,7 +128,8 @@ namespace Coffee.Pages
             };
             coffeeList.Add(newcoffee);
             var text = size + type + " added to your order";
-
+            var customer = (Customer)BindingContext;
+            BalanceText.Text = String.Format("${0}.00", customer.Balance);
             coffeeListText += String.Format("{2}{0} {1}", type, size, Environment.NewLine);
             OrderList.Text = coffeeListText;
 
@@ -168,9 +168,8 @@ namespace Coffee.Pages
                 await App.Database.SaveCustomer(customer);
                 await App.Database.SaveOrder(neworder);
                 //await Navigation.PushAsync(new CoffeeConfirmPage(coffeeList, customer));
-                await Navigation.PushAsync(new DoughnutSelectPage());
+                await Navigation.PushAsync(new DoughnutSelectPage(customer, coffeeList, neworder, coffeeListText));
                 
-
             }
             else
             {

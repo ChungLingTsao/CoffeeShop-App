@@ -88,3 +88,4 @@ D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\XamlC.stamp
 D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.dll
 D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\ref\Coffee.dll
 D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.pdb
+C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\DoughtnutSelectPage.xaml.g.cs
