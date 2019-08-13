@@ -45,6 +45,11 @@
                     Text="Account Details"
                     Clicked="OnAccountDetailsButtonClicked"
                     HeightRequest="50"/>
+            <Button
+                    Text="Logout"
+                    Clicked="OnLogoutButtonClicked"
+                    HeightRequest="50"
+                    VerticalOptions="EndAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
