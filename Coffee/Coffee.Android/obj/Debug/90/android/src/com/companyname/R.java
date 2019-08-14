@@ -4850,7 +4850,7 @@ containing a value of this type.
         public static final int notification_template_icon_low_bg=0x7f02013e;
         public static final int notification_tile_bg=0x7f020138;
         public static final int notify_panel_notification_icon_bg=0x7f020139;
-        public static final int paymark=0x7f02013a;
+        public static final int poli=0x7f02013a;
         public static final int tooltip_frame_dark=0x7f02013b;
         public static final int tooltip_frame_light=0x7f02013c;
     }

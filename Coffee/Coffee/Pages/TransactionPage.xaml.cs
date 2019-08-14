@@ -31,7 +31,6 @@ namespace Coffee.Pages
             {
                 var a = e.SelectedItem as Order;
                 Console.WriteLine(a.CustomerID);
-                //await
                 await Navigation.PushAsync(new CoffeeOrderPage
                 {
                     BindingContext = e.SelectedItem as Order

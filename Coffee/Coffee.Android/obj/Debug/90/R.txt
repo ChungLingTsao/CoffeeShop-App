@@ -1208,7 +1208,7 @@ int drawable notification_template_icon_bg 0x7f02013d
 int drawable notification_template_icon_low_bg 0x7f02013e
 int drawable notification_tile_bg 0x7f020138
 int drawable notify_panel_notification_icon_bg 0x7f020139
-int drawable paymark 0x7f02013a
+int drawable poli 0x7f02013a
 int drawable tooltip_frame_dark 0x7f02013b
 int drawable tooltip_frame_light 0x7f02013c
 int id ALT 0x7f0a0039

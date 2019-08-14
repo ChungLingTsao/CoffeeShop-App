@@ -23,7 +23,6 @@ namespace Coffee.Pages
             base.OnAppearing();
             var customer = (Customer)BindingContext;
             HomeBalance.Text = String.Format("${0}.00", customer.Balance);
-            //BalanceText.Text = String.Format("${0}", customer.Balance);
         }
 
         async void OnOrderCoffeeButtonClicked(object sender, EventArgs e)

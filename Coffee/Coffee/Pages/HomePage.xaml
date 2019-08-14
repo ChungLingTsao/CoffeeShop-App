@@ -27,8 +27,6 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <!--<Label x:Name="BalanceText" Text="{Binding Balance, Mode=OneWay}" HorizontalOptions="CenterAndExpand"
-                   Style="{StaticResource LabelStyle}" />-->
             <Button
                     Text="Order Coffee"
                     Clicked="OnOrderCoffeeButtonClicked"

@@ -28,28 +28,31 @@
                    HorizontalOptions="Center"
                    Aspect="AspectFit"/>
             <Entry x:Name="Username"
-                Placeholder="Username"
-                Text="{Binding UserName}"
-                HeightRequest="50" />
+                   Placeholder="Username"
+                   Text="{Binding UserName}"
+                   HeightRequest="50" />
             <Entry Placeholder="Name"
-                x:Name="Name"
-                Text="{Binding Name}"
-                HeightRequest="50" />
+                   x:Name="Name"
+                   Text="{Binding Name}"
+                   HeightRequest="50" />
             <Entry Placeholder="Email Address"
                    x:Name="EmailAddress"
-                Text="{Binding EmailAddress}"
-                HeightRequest="50" />
+                   Text="{Binding EmailAddress}"
+                   HeightRequest="50" />
             <Entry Placeholder="Password"
                    x:Name="Password"
-                Text="{Binding Password}"
-                HeightRequest="50" 
-                IsPassword="True"/>
-            <Button Text="Sign UP" Clicked="OnSignUpButtonClicked" 
-                TextColor="White" BackgroundColor="DarkTurquoise" 
-                CornerRadius="20" 
-                Margin="10, 10, 10, 10"
-                HeightRequest="50"
-                HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"></Button>
+                   Text="{Binding Password}"
+                   HeightRequest="50" 
+                   IsPassword="True"/>
+            <Button Text="Sign UP" 
+                    Clicked="OnSignUpButtonClicked" 
+                    TextColor="White" 
+                    BackgroundColor="DarkTurquoise" 
+                    CornerRadius="20" 
+                    Margin="10, 10, 10, 10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="EndAndExpand"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

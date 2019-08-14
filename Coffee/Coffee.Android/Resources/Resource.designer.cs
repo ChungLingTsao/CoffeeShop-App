@@ -6490,7 +6490,7 @@ namespace Coffee.Droid
 			public const int notify_panel_notification_icon_bg = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int Paymark = 2130837818;
+			public const int Poli = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
 			public const int tooltip_frame_dark = 2130837819;

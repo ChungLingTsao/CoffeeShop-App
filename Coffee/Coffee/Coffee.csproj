@@ -20,6 +20,9 @@
     <Compile Update="Pages\DoughtnutSelectPage.xaml.cs">
       <DependentUpon>DoughtnutSelectPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\PoliPage.xaml.cs">
+      <DependentUpon>PoliPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

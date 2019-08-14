@@ -27,7 +27,6 @@ namespace Coffee
             InitializeComponent();
 
             MainPage = new NavigationPage(new LoginPage());
-            //MainPage = new NavigationPage(new CoffeeSelectPage());
         }
     }
 }

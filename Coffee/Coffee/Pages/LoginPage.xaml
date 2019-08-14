@@ -54,14 +54,15 @@
                     Text="Forgot Password"
                     Clicked="OnForgotPasswordButtonClicked"
                     HeightRequest="50"
-                    HorizontalOptions="Center"
-                    VerticalOptions="EndAndExpand"/>
+                    HorizontalOptions="FillAndExpand"/>
+             <!-- USED FOR TESTING-->         
             <Button
                     Text="Delete Data"
                     Clicked="OnDeleteDataButtonClicked"
                     HeightRequest="50"
                     HorizontalOptions="FillAndExpand"
-                    VerticalOptions="EndAndExpand"/>
+                    VerticalOptions="EndAndExpand"
+                    IsVisible="False"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

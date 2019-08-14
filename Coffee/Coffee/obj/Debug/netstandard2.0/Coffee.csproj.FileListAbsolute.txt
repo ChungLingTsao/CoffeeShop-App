@@ -18,7 +18,6 @@ C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\bin\Debug\netstandard2.
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\bin\Debug\netstandard2.0\ref\Coffee.dll
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\bin\Debug\netstandard2.0\Coffee.pdb
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\CoffeeConfirmPage.xaml.g.cs
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\CoffeeSelectPage.xaml.g.cs
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\HomePage.xaml.g.cs
@@ -32,7 +31,6 @@ C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\ref\Coffee.dll
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.pdb
 C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\BankPage.xaml.g.cs
-C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\PaymarkPage.xaml.g.cs
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\bin\Debug\netstandard2.0\Coffee.deps.json
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\bin\Debug\netstandard2.0\Coffee.dll
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\bin\Debug\netstandard2.0\ref\Coffee.dll
@@ -89,3 +87,6 @@ D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.dll
 D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\ref\Coffee.dll
 D:\DEV\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Coffee.pdb
 C:\Users\byron\Documents\Visual Studio 2019\Projects\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\DoughtnutSelectPage.xaml.g.cs
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\DoughtnutSelectPage.xaml.g.cs
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\ForgotPasswordPage.xaml.g.cs
+C:\Users\chaz_\source\repos\CoffeeShop-App\Coffee\Coffee\obj\Debug\netstandard2.0\Pages\PoliPage.xaml.g.cs

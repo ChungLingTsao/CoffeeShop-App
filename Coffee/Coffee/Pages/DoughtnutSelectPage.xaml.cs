@@ -14,7 +14,7 @@ namespace Coffee.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DoughnutSelectPage : ContentPage
     {
-        //   // FOR TESTING
+        // FOR TESTING
         public static List<CoffeeData> orderList;
         public static string orderListText;
 
