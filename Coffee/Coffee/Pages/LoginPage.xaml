@@ -21,7 +21,13 @@
             <Setter Property="TextColor" Value="{StaticResource AppTextColor}" />
             <Setter Property="BorderRadius" Value="5" />
         </Style>
+
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
     </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout Margin="20">
             <Image Source="logo.PNG"
@@ -38,18 +44,25 @@
                     Text="Login"
                     Clicked="OnLoginButtonClicked"
                     HeightRequest="50"
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="FillAndExpand"/>
             <Button
                     Text="Register"
                     Clicked="OnRegisterButtonClicked"
                     HeightRequest="50"
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="FillAndExpand"/>
+            <Button
+                    Text="Forgot Password"
+                    Clicked="OnForgotPasswordButtonClicked"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"/>
+             <!-- USED FOR TESTING-->         
             <Button
                     Text="Delete Data"
                     Clicked="OnDeleteDataButtonClicked"
                     HeightRequest="50"
-                    HorizontalOptions="Center"
-                    VerticalOptions="EndAndExpand"/>
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    IsVisible="False"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

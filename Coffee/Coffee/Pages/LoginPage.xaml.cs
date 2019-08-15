@@ -18,9 +18,13 @@ namespace Coffee.Pages
             InitializeComponent();
         }
 
+        public Boolean DetailsFilledIn()
+        {
+            return (LoginUserNameEntry.Text == "" || LoginPasswordEntry.Text == "");
+        }
+
         async void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            //var _customer = (Customer)BindingContext;
             Console.WriteLine(LoginUserNameEntry.Text + " " + LoginPasswordEntry.Text);
             var customer = await App.Database.CheckCredentials(LoginUserNameEntry.Text, LoginPasswordEntry.Text);
             if (customer != null)
@@ -30,10 +34,6 @@ namespace Coffee.Pages
                 {
                     BindingContext = customer as Customer
                 });
-                //await Navigation.PushAsync(new HomePage
-                //{
-                //    BindingContext = customer as Customer
-                //});
             }
             else
             {
@@ -49,6 +49,12 @@ namespace Coffee.Pages
             {
                 BindingContext = new Customer()
             });
+        }
+
+        async void OnForgotPasswordButtonClicked(object sender, EventArgs e)
+        {
+            Console.WriteLine("Forgot Password");
+            await Navigation.PushAsync(new ForgotPasswordPage());
         }
 
         async void OnDeleteDataButtonClicked(object sender, EventArgs e)

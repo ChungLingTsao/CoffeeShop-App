@@ -8,8 +8,12 @@
              Title="Balance">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Order="Primary" IconImageSource="BalanceIcon.png" Priority="0" />
-        <ToolbarItem Order="Primary" Text="{Binding Balance, Mode=OneWay, StringFormat='${0:F0}.00'}" Priority="0" />
+        <ToolbarItem Order="Primary" 
+                     IconImageSource="BalanceIcon.png" 
+                     Priority="0" />
+        <ToolbarItem Order="Primary" 
+                     Text="{Binding Balance, Mode=OneWay, StringFormat='${0:F0}.00'}" 
+                     Priority="0" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Resources>
@@ -21,10 +25,6 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <!--<Label x:Name="BalanceText" 
-                   Text="$0" 
-                   Style="{StaticResource LabelStyle}" 
-                   HorizontalOptions="CenterAndExpand"/>-->
             <Label x:Name="RemainingCoffee"
                    Text="You can purchase 0 more coffees "
                    HorizontalOptions="CenterAndExpand"/>

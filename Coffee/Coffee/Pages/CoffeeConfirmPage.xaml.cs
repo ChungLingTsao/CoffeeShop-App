@@ -19,8 +19,10 @@ namespace Coffee.Pages
 			InitializeComponent ();
             coffeeListText = "";
             foreach (var coffee in _coffeeList)
-            {
-                coffeeListText += String.Format("{0} {1}{2}", coffee.CoffeeName, coffee.Size, Environment.NewLine);
+            { 
+                string sugar = (coffee.Sugar == true ? sugar = " +Sugar" : sugar = "");
+                string soy = (coffee.SoyMilk == true ? soy = " +SoyMilk" : soy = "");
+                coffeeListText += String.Format("{0} {1}{2}{3}{4}", coffee.CoffeeName, coffee.Size, sugar, soy, Environment.NewLine);
             }
             Console.WriteLine(coffeeListText);
             DisplayCoffee.Text = coffeeListText;

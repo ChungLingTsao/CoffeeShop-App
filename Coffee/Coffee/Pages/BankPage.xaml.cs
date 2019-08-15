@@ -75,7 +75,7 @@ namespace Coffee.Pages
                 customer.Balance += amount;
                 Console.WriteLine(amount);
                 await App.Database.SaveCustomer(customer);
-                await Navigation.PushAsync(new PaymarkPage(bankSelected, pickerSelected));
+                await Navigation.PushAsync(new PoliPage(bankSelected, pickerSelected));
             }
         }
 

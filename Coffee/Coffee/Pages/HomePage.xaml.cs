@@ -23,7 +23,6 @@ namespace Coffee.Pages
             base.OnAppearing();
             var customer = (Customer)BindingContext;
             HomeBalance.Text = String.Format("${0}.00", customer.Balance);
-            //BalanceText.Text = String.Format("${0}", customer.Balance);
         }
 
         async void OnOrderCoffeeButtonClicked(object sender, EventArgs e)
@@ -34,6 +33,13 @@ namespace Coffee.Pages
                 BindingContext = this.BindingContext
             });
         }
+
+        async void OnOrderDoughnutButtonClicked(object sender, EventArgs e)
+        {
+            Console.WriteLine("Order Doughnut");
+            await Navigation.PushAsync(new DoughnutSelectPage(this.BindingContext as Customer, new List<CoffeeData>(), new Order(), "Order List:"));
+        }
+
 
         async void OnTopUpButtonClicked(object sender, EventArgs e)
         {
@@ -51,6 +57,11 @@ namespace Coffee.Pages
             {
                 BindingContext = this.BindingContext
             });
+        }
+
+        void OnLogoutButtonClicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new LoginPage());
         }
 
     }
